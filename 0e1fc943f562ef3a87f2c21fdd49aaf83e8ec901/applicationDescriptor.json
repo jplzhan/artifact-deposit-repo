@@ -1,0 +1,38 @@
+{
+    "processDescription": {
+        "process": {
+            "id": "zhan/algorithm-deposit-repo",
+            "title": "Update README.md\n\n$build",
+            "owsContext": {
+                "offering": {
+                    "content": {
+                        "href": "https://github.jpl.nasa.gov/zhan/algorithm-deposit-repo/tree/0e1fc943f562ef3a87f2c21fdd49aaf83e8ec901"
+                    }
+                }
+            },
+            "abstract": "Application Package Demo",
+            "keywords": [
+                "Demo"
+            ],
+            "inputs": [
+                "input_file",
+                "min_spin_time",
+                "max_spin_time"
+            ],
+            "outputs": []
+        },
+        "processVersion": "1.0.0",
+        "jobControlOptions": [
+            "async-execute"
+        ],
+        "outputTransmission": [
+            "reference"
+        ]
+    },
+    "immediateDeployment": true,
+    "executionUnit": [
+        {
+            "href": "N/A"
+        }
+    ]
+}
