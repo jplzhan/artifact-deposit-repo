@@ -1,0 +1,68 @@
+{
+    "processDescription": {
+        "process": {
+            "id": "zhan/algorithm-deposit-repo:test-tag-14",
+            "title": "Renamed notebook to be more easily parseable.",
+            "owsContext": {
+                "offering": {
+                    "content": {
+                        "href": "https://github.com/jplzhan/artifact-deposit-repo/blob/main/test-tag-14/process.cwl"
+                    }
+                }
+            },
+            "abstract": "Application Package Demo",
+            "keywords": [
+                "Demo"
+            ],
+            "inputs": [
+                {
+                    "id": "input_file",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "min_spin_time",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "max_spin_time",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "outputs": []
+        },
+        "processVersion": "1.0.0",
+        "jobControlOptions": [
+            "async-execute"
+        ],
+        "outputTransmission": [
+            "reference"
+        ]
+    },
+    "immediateDeployment": true,
+    "executionUnit": [
+        {
+            "href": "docker://jplzhan/ci-generated-images:test-tag-14"
+        }
+    ]
+}
