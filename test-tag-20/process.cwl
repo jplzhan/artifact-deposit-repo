@@ -7,29 +7,29 @@ class: CommandLineTool
 cwlVersion: v1.0
 hints:
   DockerRequirement:
-    dockerPull: temp url to speed up debugging
+    dockerPull: ''
 inputs:
   input_file:
     inputBinding:
       position: 1
       prefix: --parameters
-      shellQuote: 'false'
+      shellQuote: false
       valueFrom: input_file "$(self)"
     type: string
   max_spin_time:
     inputBinding:
       position: 3
       prefix: --parameters
-      shellQuote: 'false'
+      shellQuote: false
       valueFrom: max_spin_time "$(self)"
-    type: string
+    type: float
   min_spin_time:
     inputBinding:
       position: 2
       prefix: --parameters
-      shellQuote: 'false'
+      shellQuote: false
       valueFrom: min_spin_time "$(self)"
-    type: string
+    type: float
 outputs:
   LC__TIF:
     outputBinding:

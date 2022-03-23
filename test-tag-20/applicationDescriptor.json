@@ -32,7 +32,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": "string"
+                                "name": "float"
                             }
                         }
                     ]
@@ -43,7 +43,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": "string"
+                                "name": "float"
                             }
                         }
                     ]
@@ -99,7 +99,7 @@
     "immediateDeployment": true,
     "executionUnit": [
         {
-            "href": "temp url to speed up debugging"
+            "href": ""
         }
     ]
 }
