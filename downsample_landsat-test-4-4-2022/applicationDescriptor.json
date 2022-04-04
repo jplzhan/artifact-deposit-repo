@@ -1,0 +1,105 @@
+{
+    "processDescription": {
+        "process": {
+            "id": "zhan/algorithm-deposit-repo:downsample_landsat-test-4-4-2022",
+            "title": "Updated the input_file parameter in downsample_landsat to match the updated notebook.",
+            "owsContext": {
+                "offering": {
+                    "content": {
+                        "href": "https://github.com/jplzhan/artifact-deposit-repo/blob/main/downsample_landsat-test-4-4-2022/process.cwl"
+                    }
+                }
+            },
+            "abstract": "Application Package Demo",
+            "keywords": [
+                "Demo"
+            ],
+            "inputs": [
+                {
+                    "id": "input_file",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "min_spin_time",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "float"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "max_spin_time",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "float"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "id": "output_nb.ipynb",
+                    "title": "Automatically detected from .ipynb parsing.",
+                    "output": {
+                        "formats": [
+                            {
+                                "mimeType": "text/*",
+                                "default": true
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "*_downsampled",
+                    "title": "Automatically detected from .ipynb parsing.",
+                    "output": {
+                        "formats": [
+                            {
+                                "mimeType": "text/*",
+                                "default": true
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "LC*.TIF",
+                    "title": "Automatically detected from .ipynb parsing.",
+                    "output": {
+                        "formats": [
+                            {
+                                "mimeType": "text/*",
+                                "default": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "processVersion": "1.0.0",
+        "jobControlOptions": [
+            "async-execute"
+        ],
+        "outputTransmission": [
+            "reference"
+        ]
+    },
+    "immediateDeployment": true,
+    "executionUnit": [
+        {
+            "href": "docker://jplzhan/ci-generated-images:downsample_landsat-test-4-4-2022"
+        }
+    ]
+}
