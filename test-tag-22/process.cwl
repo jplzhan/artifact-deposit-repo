@@ -7,7 +7,7 @@ class: CommandLineTool
 cwlVersion: v1.0
 hints:
   DockerRequirement:
-    dockerPull: docker://jplzhan/ci-generated-images:test-tag-22
+    dockerPull: jplzhan/ci-generated-images:test-tag-22
 inputs:
   input_file:
     inputBinding:
