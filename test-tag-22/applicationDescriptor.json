@@ -1,7 +1,7 @@
 {
     "processDescription": {
         "process": {
-            "id": "zhan/algorithm-deposit-repo:test-tag-22",
+            "id": "zhan-algorithm-deposit-repo-test-tag-22",
             "title": "Merge branch 'downsample-landsat' of https://github.jpl.nasa.gov/zhan/algorithm-deposit-repo into downsample-landsat",
             "owsContext": {
                 "offering": {
