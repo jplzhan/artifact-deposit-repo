@@ -1,8 +1,8 @@
 {
     "processDescription": {
         "process": {
-            "id": "jplzhan/algorithm-deposit-repo:downsample-landsat",
-            "title": "Added remaining files.",
+            "id": "jplzhan/algorithm-deposit-repo:test-tag-1",
+            "title": "Updated README.md",
             "owsContext": {
                 "offering": {
                     "content": {
@@ -99,7 +99,7 @@
     "immediateDeployment": true,
     "executionUnit": [
         {
-            "href": "docker://jplzhan/ci-generated-images:jplzhan.algorithm-deposit-repo.downsample-landsat"
+            "href": "docker://jplzhan/ci-generated-images:jplzhan.algorithm-deposit-repo.test-tag-1"
         }
     ]
 }

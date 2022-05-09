@@ -7,7 +7,7 @@ class: CommandLineTool
 cwlVersion: v1.0
 hints:
   DockerRequirement:
-    dockerPull: jplzhan/ci-generated-images:jplzhan.algorithm-deposit-repo.downsample-landsat
+    dockerPull: jplzhan/ci-generated-images:jplzhan.algorithm-deposit-repo.test-tag-1
 inputs:
   input_file:
     inputBinding:
