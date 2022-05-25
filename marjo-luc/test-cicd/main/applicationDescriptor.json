@@ -1,0 +1,46 @@
+{
+    "processDescription": {
+        "process": {
+            "id": "marjo-luc.test-cicd.main",
+            "title": "Create environment.yml",
+            "owsContext": {
+                "offering": {
+                    "content": {
+                        "href": "https://github.com/jplzhan/artifact-deposit-repo/blob/main/marjo-luc/test-cicd/main/process.cwl"
+                    }
+                }
+            },
+            "abstract": "Application Package Demo",
+            "keywords": [
+                "Demo"
+            ],
+            "inputs": [
+                {
+                    "id": "input_1",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "outputs": []
+        },
+        "processVersion": "1.0.0",
+        "jobControlOptions": [
+            "async-execute"
+        ],
+        "outputTransmission": [
+            "reference"
+        ]
+    },
+    "immediateDeployment": true,
+    "executionUnit": [
+        {
+            "href": "docker://jplzhan/ci-generated-images:marjo-luc.test-cicd.main"
+        }
+    ]
+}
