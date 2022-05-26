@@ -6,7 +6,7 @@
             "owsContext": {
                 "offering": {
                     "content": {
-                        "href": "https://github.com/jplzhan/artifact-deposit-repo/blob/main/marjo-luc/test-cicd/main/process.cwl"
+                        "href": "https://raw.githubusercontent.com/jplzhan/artifact-deposit-repo/main/marjo-luc/test-cicd/main/process.cwl"
                     }
                 }
             },
