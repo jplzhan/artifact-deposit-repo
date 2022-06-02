@@ -1,0 +1,34 @@
+{
+    "processDescription": {
+        "process": {
+            "id": "unity-sds.unity-analytics-bcdp.main",
+            "title": "Rename cordex_example_papermill.ipynb to process.ipynb",
+            "owsContext": {
+                "offering": {
+                    "content": {
+                        "href": "https://raw.githubusercontent.com/jplzhan/artifact-deposit-repo/main/unity-sds/unity-analytics-bcdp/main/process.cwl"
+                    }
+                }
+            },
+            "abstract": "Application Package Demo",
+            "keywords": [
+                "Demo"
+            ],
+            "inputs": [],
+            "outputs": []
+        },
+        "processVersion": "1.0.0",
+        "jobControlOptions": [
+            "async-execute"
+        ],
+        "outputTransmission": [
+            "reference"
+        ]
+    },
+    "immediateDeployment": true,
+    "executionUnit": [
+        {
+            "href": "docker://jplzhan/ci-generated-images:unity-sds.unity-analytics-bcdp.main"
+        }
+    ]
+}
