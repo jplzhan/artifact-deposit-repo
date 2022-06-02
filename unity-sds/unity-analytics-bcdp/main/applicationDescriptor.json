@@ -14,7 +14,19 @@
             "keywords": [
                 "Demo"
             ],
-            "inputs": [],
+            "inputs": [
+                {
+                    "id": "variable",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                }
+            ],
             "outputs": []
         },
         "processVersion": "1.0.0",

@@ -8,7 +8,14 @@ cwlVersion: v1.0
 hints:
   DockerRequirement:
     dockerPull: jplzhan/ci-generated-images:unity-sds.unity-analytics-bcdp.main
-inputs: {}
+inputs:
+  variable:
+    inputBinding:
+      position: 1
+      prefix: --parameters
+      shellQuote: false
+      valueFrom: variable "$(self)"
+    type: string
 outputs: {}
 requirements:
   ShellCommandRequirement: {}
