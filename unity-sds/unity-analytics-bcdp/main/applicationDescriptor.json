@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "unity-sds.unity-analytics-bcdp.main",
-            "title": "Rename cordex_example_papermill.ipynb to process.ipynb",
+            "title": "TEST: tag output files",
             "owsContext": {
                 "offering": {
                     "content": {
@@ -27,7 +27,44 @@
                     ]
                 }
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "id": "cordex_africa.png",
+                    "title": "Automatically detected from .ipynb parsing.",
+                    "output": {
+                        "formats": [
+                            {
+                                "mimeType": "text/*",
+                                "default": true
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "CORDEX_Africa_clt.nc",
+                    "title": "Automatically detected from .ipynb parsing.",
+                    "output": {
+                        "formats": [
+                            {
+                                "mimeType": "text/*",
+                                "default": true
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "output_nb.ipynb",
+                    "title": "Automatically detected from .ipynb parsing.",
+                    "output": {
+                        "formats": [
+                            {
+                                "mimeType": "text/*",
+                                "default": true
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "processVersion": "1.0.0",
         "jobControlOptions": [
