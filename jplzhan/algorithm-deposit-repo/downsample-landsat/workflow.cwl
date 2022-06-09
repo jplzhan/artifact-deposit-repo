@@ -13,6 +13,8 @@ inputs:
     type: string
   max_spin_time:
     type: int
+  min_spin_time:
+    type: int
 outputs:
   final_dataset_dir:
     outputSource: process/dataset_dir
