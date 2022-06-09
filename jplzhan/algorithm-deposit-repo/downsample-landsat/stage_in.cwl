@@ -17,7 +17,11 @@ requirements:
     listing:
     - entry: '#!/bin/bash -xe
 
-        mkdir -f /home/jovyan/input'
+        mkdir -f /home/jovyan/inputs
+
+        curl $(inputs.input_file) /home/jovyan/inputs/input_file
+
+        echo "input_file: /home/jovyan/inputs/input_file" >> /home/jovyan/inputs/inputs.yml'
       entryname: stage_in.sh
 stderr: stage_in_stderr.txt
 stdout: stage_in_stdout.txt
