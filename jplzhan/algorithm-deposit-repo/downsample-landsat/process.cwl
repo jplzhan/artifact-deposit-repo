@@ -15,14 +15,14 @@ inputs:
       prefix: --parameters
       shellQuote: false
       valueFrom: max_spin_time "$(self)"
-    type: float
+    type: int
   min_spin_time:
     inputBinding:
       position: 1
       prefix: --parameters
       shellQuote: false
       valueFrom: min_spin_time "$(self)"
-    type: float
+    type: int
 outputs:
   image:
     outputBinding:

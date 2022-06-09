@@ -21,7 +21,9 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": "float"
+                                "name": [
+                                    "int"
+                                ]
                             }
                         }
                     ]
@@ -32,7 +34,9 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": "float"
+                                "name": [
+                                    "int"
+                                ]
                             }
                         }
                     ]
