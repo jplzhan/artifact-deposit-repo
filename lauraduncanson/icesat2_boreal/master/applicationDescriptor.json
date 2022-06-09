@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "lauraduncanson.icesat2_boreal.master",
-            "title": "testing edge effects",
+            "title": "cog average resampling",
             "owsContext": {
                 "offering": {
                     "content": {
