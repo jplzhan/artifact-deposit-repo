@@ -26,15 +26,15 @@ inputs:
 outputs:
   image:
     outputBinding:
-      glob: image
+      glob: '"LC*.TIF"'
     type: File
   output_nb:
     outputBinding:
-      glob: output_nb
+      glob: '"output_nb.ipynb"'
     type: File
   wildcard:
     outputBinding:
-      glob: wildcard
+      glob: '"*_downsampled"'
     type: File
 requirements:
   ShellCommandRequirement: {}
