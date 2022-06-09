@@ -9,39 +9,32 @@ hints:
   DockerRequirement:
     dockerPull: jplzhan/ci-generated-images:jplzhan.algorithm-deposit-repo.downsample-landsat
 inputs:
-  input_file:
-    inputBinding:
-      position: 1
-      prefix: --parameters
-      shellQuote: false
-      valueFrom: input_file "$(self)"
-    type: string
   max_spin_time:
     inputBinding:
-      position: 3
+      position: 2
       prefix: --parameters
       shellQuote: false
       valueFrom: max_spin_time "$(self)"
     type: float
   min_spin_time:
     inputBinding:
-      position: 2
+      position: 1
       prefix: --parameters
       shellQuote: false
       valueFrom: min_spin_time "$(self)"
     type: float
 outputs:
-  LC__TIF:
+  image:
     outputBinding:
-      glob: LC*.TIF
+      glob: image
     type: File
-  __downsampled:
+  output_nb:
     outputBinding:
-      glob: '*_downsampled'
+      glob: output_nb
     type: File
-  output_nb_ipynb:
+  wildcard:
     outputBinding:
-      glob: output_nb.ipynb
+      glob: wildcard
     type: File
 requirements:
   ShellCommandRequirement: {}

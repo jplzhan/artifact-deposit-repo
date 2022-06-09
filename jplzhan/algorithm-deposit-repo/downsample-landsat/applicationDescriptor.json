@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.algorithm-deposit-repo.downsample-landsat",
-            "title": "Updated README.md",
+            "title": "Update process.ipynb",
             "owsContext": {
                 "offering": {
                     "content": {
@@ -15,17 +15,6 @@
                 "Demo"
             ],
             "inputs": [
-                {
-                    "id": "input_file",
-                    "title": "Automatically detected using papermill.",
-                    "literalDataDomains": [
-                        {
-                            "dataType": {
-                                "name": "string"
-                            }
-                        }
-                    ]
-                },
                 {
                     "id": "min_spin_time",
                     "title": "Automatically detected using papermill.",
@@ -51,7 +40,7 @@
             ],
             "outputs": [
                 {
-                    "id": "output_nb.ipynb",
+                    "id": "output_nb",
                     "title": "Automatically detected from .ipynb parsing.",
                     "output": {
                         "formats": [
@@ -63,7 +52,7 @@
                     }
                 },
                 {
-                    "id": "*_downsampled",
+                    "id": "wildcard",
                     "title": "Automatically detected from .ipynb parsing.",
                     "output": {
                         "formats": [
@@ -75,7 +64,7 @@
                     }
                 },
                 {
-                    "id": "LC*.TIF",
+                    "id": "image",
                     "title": "Automatically detected from .ipynb parsing.",
                     "output": {
                         "formats": [
