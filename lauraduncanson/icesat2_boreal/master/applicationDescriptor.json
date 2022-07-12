@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "lauraduncanson.icesat2_boreal.master",
-            "title": "cog average resampling",
+            "title": "corrected C calc",
             "owsContext": {
                 "offering": {
                     "content": {
