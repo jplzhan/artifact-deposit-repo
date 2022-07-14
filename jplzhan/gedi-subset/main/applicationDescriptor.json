@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.gedi-subset.main",
-            "title": "Revised build scheme for repo2docker.",
+            "title": "Update Dockerfile",
             "owsContext": {
                 "offering": {
                     "content": {
