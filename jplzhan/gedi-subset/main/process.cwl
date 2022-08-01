@@ -18,11 +18,18 @@ inputs:
     type: string
   limit:
     inputBinding:
-      position: 2
+      position: 3
       prefix: --parameters
       shellQuote: false
       valueFrom: limit "$(self)"
     type: int
+  query:
+    inputBinding:
+      position: 2
+      prefix: --parameters
+      shellQuote: false
+      valueFrom: query "$(self)"
+    type: string
 outputs: {}
 requirements:
   ShellCommandRequirement: {}

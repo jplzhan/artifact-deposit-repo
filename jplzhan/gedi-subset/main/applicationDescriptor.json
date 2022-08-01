@@ -29,6 +29,19 @@
                     ]
                 },
                 {
+                    "id": "query",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "string"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
                     "id": "limit",
                     "title": "Automatically detected using papermill.",
                     "literalDataDomains": [

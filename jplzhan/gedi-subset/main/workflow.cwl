@@ -15,6 +15,8 @@ inputs:
     type: string
   limit:
     type: int
+  query:
+    type: string
 outputs:
   final_dataset_dir:
     outputSource: process/dataset_dir
