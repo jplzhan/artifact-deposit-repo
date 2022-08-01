@@ -12,11 +12,9 @@ inputs:
   aoi:
     type: string
   columns:
+    type: string
+  limit:
     type: int
-  name:
-    type: string
-  query:
-    type: string
 outputs:
   final_dataset_dir:
     outputSource: process/dataset_dir

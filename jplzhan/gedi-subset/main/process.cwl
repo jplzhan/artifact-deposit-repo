@@ -15,21 +15,14 @@ inputs:
       prefix: --parameters
       shellQuote: false
       valueFrom: columns "$(self)"
-    type: int
-  name:
-    inputBinding:
-      position: 3
-      prefix: --parameters
-      shellQuote: false
-      valueFrom: name "$(self)"
     type: string
-  query:
+  limit:
     inputBinding:
       position: 2
       prefix: --parameters
       shellQuote: false
-      valueFrom: query "$(self)"
-    type: string
+      valueFrom: limit "$(self)"
+    type: int
 outputs: {}
 requirements:
   ShellCommandRequirement: {}
