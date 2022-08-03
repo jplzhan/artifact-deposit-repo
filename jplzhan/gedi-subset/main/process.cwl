@@ -9,23 +9,26 @@ hints:
   DockerRequirement:
     dockerPull: jplzhan/ci-generated-images:jplzhan.gedi-subset.main
 inputs:
+  aoi:
+    inputBinding:
+      prefix: --parameters
+      shellQuote: false
+      valueFrom: aoi "$(self)"
+    type: File
   columns:
     inputBinding:
-      position: 1
       prefix: --parameters
       shellQuote: false
       valueFrom: columns "$(self)"
     type: string
   limit:
     inputBinding:
-      position: 3
       prefix: --parameters
       shellQuote: false
       valueFrom: limit "$(self)"
     type: int
   query:
     inputBinding:
-      position: 2
       prefix: --parameters
       shellQuote: false
       valueFrom: query "$(self)"
