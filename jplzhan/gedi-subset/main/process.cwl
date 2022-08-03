@@ -30,7 +30,11 @@ inputs:
       shellQuote: false
       valueFrom: query "$(self)"
     type: string
-outputs: {}
+outputs:
+  output_nb:
+    outputBinding:
+      glob: output_nb.ipynb
+    type: File
 requirements:
   ShellCommandRequirement: {}
 stdout: _stdout.txt

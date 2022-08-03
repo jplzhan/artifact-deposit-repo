@@ -9,58 +9,29 @@ hints:
     - workflow_aws_access_key_id
     - workflow_aws_secret_access_key
 inputs:
-  aoi:
-    type: string
-  columns:
-    type: string
-  limit:
-    type: int
-  query:
-    type: string
-outputs:
-  final_dataset_dir:
-    outputSource: process/dataset_dir
-    type: Directory
-  stderr-process:
-    outputSource: process/stderr_file
-    type: File
-  stderr-stage_out:
-    outputSource: stage_out/stderr_file
-    type: File
-  stdout-process:
-    outputSource: process/stdout_file
-    type: File
-  stdout-stage_out:
-    outputSource: stage_out/stdout_file
-    type: File
+  aoi: string
+  columns: string
+  limit: int
+  query: string
+outputs: {}
 steps:
   process:
     in:
-      input_file: stage_in/image_file
-      max_spin_time: workflow_max_spin_time
-      min_spin_time: workflow_min_spin_time
+      aoi: stage_in_aoi/output_file
+      columns: columns
+      limit: limit
+      query: query
     out:
-    - output_nb_file
-    - dataset_dir
-    - stdout_file
-    - stderr_file
+    - output_nb
     run: process.cwl
-  stage_in:
+  stage_in_aoi:
     in:
-      input_url: workflow_input_url
+      input_path: aoi
     out:
-    - output_nb_file
-    - image_file
-    - stdout_file
-    - stderr_file
+    - output_file
     run: stage_in.cwl
   stage_out:
     in:
-      aws_access_key_id: workflow_aws_access_key_id
-      aws_secret_access_key: workflow_aws_secret_access_key
-      base_dataset_url: workflow_base_dataset_url
-      dataset_dir: process/dataset_dir
-    out:
-    - stdout_file
-    - stderr_file
+      output_nb: process/output_nb
+    out: []
     run: stage_out.cwl

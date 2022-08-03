@@ -1,27 +1,27 @@
 #!/usr/bin/env cwl-runner
 baseCommand:
-- sh
-- stage_in.sh
+- python3
+- stage_in.py
 class: CommandLineTool
-cwlVersion: v1.0
+cwlVersion: v1.1
+hints:
+  DockerRequirement:
+    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.main
 inputs:
-  aoi:
+  input_path:
+    inputBinding:
+      position: 1
+      shellQuote: false
+      valueFrom: '"$(self)"
+
+        '
     type: string
 outputs:
-  inputs_yml:
+  output_file:
     outputBinding:
-      glob: /home/jovyan/inputs/inputs.yml
+      glob: $(outputs.stdout_of_stage_in_script)
     type: File
 requirements:
-  InitialWorkDirRequirement:
-    listing:
-    - entry: '#!/bin/bash -xe
-
-        mkdir -f /home/jovyan/inputs
-
-        curl $(inputs.aoi) /home/jovyan/inputs/aoi
-
-        echo "aoi: /home/jovyan/inputs/aoi" >> /home/jovyan/inputs/inputs.yml'
-      entryname: stage_in.sh
-stderr: stage_in_stderr.txt
-stdout: stage_in_stdout.txt
+  NetworkAccess:
+    networkAccess: true
+  ShellCommandRequirement: {}

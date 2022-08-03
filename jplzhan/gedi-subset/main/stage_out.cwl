@@ -4,7 +4,8 @@ baseCommand:
 - stage_out.sh
 class: CommandLineTool
 cwlVersion: v1.0
-inputs: {}
+inputs:
+  output_nb: File
 outputs: null
 requirements:
   InitialWorkDirRequirement:
