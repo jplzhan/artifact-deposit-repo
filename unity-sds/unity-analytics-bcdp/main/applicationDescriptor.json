@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "unity-sds.unity-analytics-bcdp.main",
-            "title": "TEST: tag output files",
+            "title": "Update environment.yml",
             "owsContext": {
                 "offering": {
                     "content": {
@@ -21,50 +21,15 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": "string"
+                                "name": [
+                                    "string"
+                                ]
                             }
                         }
                     ]
                 }
             ],
-            "outputs": [
-                {
-                    "id": "cordex_africa.png",
-                    "title": "Automatically detected from .ipynb parsing.",
-                    "output": {
-                        "formats": [
-                            {
-                                "mimeType": "text/*",
-                                "default": true
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "CORDEX_Africa_clt.nc",
-                    "title": "Automatically detected from .ipynb parsing.",
-                    "output": {
-                        "formats": [
-                            {
-                                "mimeType": "text/*",
-                                "default": true
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "output_nb.ipynb",
-                    "title": "Automatically detected from .ipynb parsing.",
-                    "output": {
-                        "formats": [
-                            {
-                                "mimeType": "text/*",
-                                "default": true
-                            }
-                        ]
-                    }
-                }
-            ]
+            "outputs": []
         },
         "processVersion": "1.0.0",
         "jobControlOptions": [

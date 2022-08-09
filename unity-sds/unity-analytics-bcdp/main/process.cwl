@@ -11,21 +11,12 @@ hints:
 inputs:
   variable:
     inputBinding:
-      position: 1
       prefix: --parameters
       shellQuote: false
       valueFrom: variable "$(self)"
     type: string
 outputs:
-  CORDEX_Africa_clt_nc:
-    outputBinding:
-      glob: CORDEX_Africa_clt.nc
-    type: File
-  cordex_africa_png:
-    outputBinding:
-      glob: cordex_africa.png
-    type: File
-  output_nb_ipynb:
+  output_nb:
     outputBinding:
       glob: output_nb.ipynb
     type: File
