@@ -13,6 +13,8 @@ inputs:
   columns: string
   limit: int
   query: string
+  workflow_aws_access_key_id: string
+  workflow_aws_secret_access_key: string
 outputs: {}
 steps:
   process:
@@ -26,6 +28,8 @@ steps:
     run: process.cwl
   stage_in_aoi:
     in:
+      aws_access_key_id: workflow_aws_access_key_id
+      aws_secret_access_key: workflow_aws_secret_access_key
       input_path: aoi
     out:
     - output_file
