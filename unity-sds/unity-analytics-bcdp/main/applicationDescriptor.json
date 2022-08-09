@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "unity-sds.unity-analytics-bcdp.main",
-            "title": "Update environment.yml",
+            "title": "Parameterize dataset path",
             "owsContext": {
                 "offering": {
                     "content": {
@@ -17,6 +17,19 @@
             "inputs": [
                 {
                     "id": "variable",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "string"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "dataset_path",
                     "title": "Automatically detected using papermill.",
                     "literalDataDomains": [
                         {

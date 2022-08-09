@@ -9,6 +9,12 @@ hints:
   DockerRequirement:
     dockerPull: jplzhan/ci-generated-images:unity-sds.unity-analytics-bcdp.main
 inputs:
+  dataset_path:
+    inputBinding:
+      prefix: --parameters
+      shellQuote: false
+      valueFrom: dataset_path "$(self)"
+    type: string
   variable:
     inputBinding:
       prefix: --parameters

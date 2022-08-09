@@ -9,11 +9,15 @@ hints:
     - workflow_aws_access_key_id
     - workflow_aws_secret_access_key
 inputs:
+  dataset_path: string
   variable: string
+  workflow_aws_access_key_id: string
+  workflow_aws_secret_access_key: string
 outputs: {}
 steps:
   process:
     in:
+      dataset_path: dataset_path
       variable: variable
     out:
     - output_nb
