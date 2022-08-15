@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.gedi-subset.main",
-            "title": "Create maap.cfg",
+            "title": "Create aoi.geojson",
             "owsContext": {
                 "offering": {
                     "content": {
