@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.gedi-subset.main",
-            "title": "Create aoi.geojson",
+            "title": "Update process.ipynb",
             "owsContext": {
                 "offering": {
                     "content": {
