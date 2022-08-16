@@ -6,7 +6,7 @@ class: CommandLineTool
 cwlVersion: v1.1
 hints:
   DockerRequirement:
-    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.main
+    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v1
 inputs:
   aws_access_key_id: string
   aws_secret_access_key: string
