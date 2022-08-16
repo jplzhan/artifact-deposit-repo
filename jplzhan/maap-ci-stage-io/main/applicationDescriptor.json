@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.maap-ci-stage-io.main",
-            "title": "Fixed stage in script.",
+            "title": "Create Dockerfile",
             "owsContext": {
                 "offering": {
                     "content": {
