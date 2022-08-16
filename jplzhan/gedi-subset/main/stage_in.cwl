@@ -1,7 +1,7 @@
 #!/usr/bin/env cwl-runner
 baseCommand:
 - python3
-- stage_in.py
+- /home/jovyan/stage_in.py
 class: CommandLineTool
 cwlVersion: v1.1
 hints:
