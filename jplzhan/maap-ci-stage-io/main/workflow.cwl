@@ -9,6 +9,7 @@ hints:
     - workflow_aws_access_key_id
     - workflow_aws_secret_access_key
 inputs:
+  staging_type: string
   workflow_aws_access_key_id: string
   workflow_aws_secret_access_key: string
 outputs: {}
