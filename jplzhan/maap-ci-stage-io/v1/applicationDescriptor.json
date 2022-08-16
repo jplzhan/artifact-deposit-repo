@@ -1,0 +1,34 @@
+{
+    "processDescription": {
+        "process": {
+            "id": "jplzhan.maap-ci-stage-io.v1",
+            "title": "Delete Dockerfile",
+            "owsContext": {
+                "offering": {
+                    "content": {
+                        "href": "https://raw.githubusercontent.com/jplzhan/artifact-deposit-repo/main/jplzhan/maap-ci-stage-io/v1/process.cwl"
+                    }
+                }
+            },
+            "abstract": "Application Package Demo",
+            "keywords": [
+                "Demo"
+            ],
+            "inputs": [],
+            "outputs": []
+        },
+        "processVersion": "1.0.0",
+        "jobControlOptions": [
+            "async-execute"
+        ],
+        "outputTransmission": [
+            "reference"
+        ]
+    },
+    "immediateDeployment": true,
+    "executionUnit": [
+        {
+            "href": "docker://jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v1"
+        }
+    ]
+}
