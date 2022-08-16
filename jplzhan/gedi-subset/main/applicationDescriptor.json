@@ -6,7 +6,7 @@
             "owsContext": {
                 "offering": {
                     "content": {
-                        "href": "https://raw.githubusercontent.com/jplzhan/artifact-deposit-repo/main/jplzhan/gedi-subset/main/process.cwl"
+                        "href": "https://raw.githubusercontent.com/jplzhan/artifact-deposit-repo/main/jplzhan/gedi-subset/main/workflow.cwl"
                     }
                 }
             },
