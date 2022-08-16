@@ -12,15 +12,20 @@ inputs:
   aws_secret_access_key: string
   input_path:
     inputBinding:
+      position: 2
+      shellQuote: false
+    type: string
+  staging_type:
+    inputBinding:
       position: 1
       shellQuote: false
     type: string
 outputs:
   output_file:
     outputBinding:
-      glob: $(outputs.stdout)
+      glob: inputs/*
     type: File
-  stdout:
+  stdout_txt:
     type: stdout
 requirements:
   EnvVarRequirement:

@@ -31,6 +31,7 @@ steps:
       aws_access_key_id: workflow_aws_access_key_id
       aws_secret_access_key: workflow_aws_secret_access_key
       input_path: aoi
+      staging_type: HTTP
     out:
     - output_file
     run: stage_in.cwl

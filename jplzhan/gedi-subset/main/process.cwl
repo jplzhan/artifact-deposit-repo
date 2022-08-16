@@ -13,7 +13,7 @@ inputs:
     inputBinding:
       prefix: --parameters
       shellQuote: false
-      valueFrom: aoi "$(self)"
+      valueFrom: aoi "$(self.path)"
     type: File
   columns:
     inputBinding:
