@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.maap-ci-stage-io.main",
-            "title": "Update environment.yml",
+            "title": "Create maap.cfg",
             "owsContext": {
                 "offering": {
                     "content": {
