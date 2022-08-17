@@ -9,11 +9,41 @@ hints:
     - workflow_aws_access_key_id
     - workflow_aws_secret_access_key
 inputs:
-  aoi: string
+  aoi:
+    type:
+    - fields:
+        url: string
+      name: HTTP
+      type: record
+    - fields:
+        s3_url: string
+      name: S3_unsigned
+      type: record
+    - fields:
+        aws_access_key_id: string
+        aws_secret_access_key: string
+        s3_url: string
+      name: S3
+      type: record
+    - fields:
+        password: string
+        url: string
+        username: string
+      name: DAAC
+      type: record
+    - fields:
+        collection_id: string
+        granule_name: string
+      name: MAAP
+      type: record
+    - fields:
+        role_arn: string
+        source_profile: string
+      name: Role
+      type: record
   columns: string
   limit: int
   query: string
-  staging_type: string
   workflow_aws_access_key_id: string
   workflow_aws_secret_access_key: string
 outputs: {}
@@ -29,10 +59,7 @@ steps:
     run: process.cwl
   stage_in_aoi:
     in:
-      aws_access_key_id: workflow_aws_access_key_id
-      aws_secret_access_key: workflow_aws_secret_access_key
       input_path: aoi
-      staging_type: staging_type
     out:
     - output_file
     run: stage_in.cwl

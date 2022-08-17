@@ -8,18 +8,98 @@ hints:
   DockerRequirement:
     dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v1
 inputs:
-  aws_access_key_id: string
-  aws_secret_access_key: string
   input_path:
-    inputBinding:
-      position: 2
-      shellQuote: false
-    type: string
-  staging_type:
-    inputBinding:
-      position: 1
-      shellQuote: false
-    type: string
+    type:
+    - fields:
+        url:
+          inputBinding:
+            position: 1
+            shellQuote: false
+            valueFrom: HTTP "$(self)"
+          type: string
+      name: HTTP
+      type: record
+    - fields:
+        s3_url:
+          inputBinding:
+            position: 1
+            shellQuote: false
+            valueFrom: S3_unsigned "$(self)"
+          type: string
+      name: S3_unsigned
+      type: record
+    - fields:
+        aws_access_key_id:
+          inputBinding:
+            position: 2
+            shellQuote: false
+            valueFrom: $(self)
+          type: string
+        aws_secret_access_key:
+          inputBinding:
+            position: 3
+            shellQuote: false
+            valueFrom: $(self)
+          type: string
+        s3_url:
+          inputBinding:
+            position: 1
+            shellQuote: false
+            valueFrom: S3 "$(self)"
+          type: string
+      name: S3
+      type: record
+    - fields:
+        password:
+          inputBinding:
+            position: 3
+            shellQuote: false
+            valueFrom: $(self)
+          type: string
+        url:
+          inputBinding:
+            position: 1
+            shellQuote: false
+            valueFrom: DAAC "$(self)"
+          type: string
+        username:
+          inputBinding:
+            position: 2
+            shellQuote: false
+            valueFrom: $(self)
+          type: string
+      name: DAAC
+      type: record
+    - fields:
+        collection_id:
+          inputBinding:
+            position: 1
+            shellQuote: false
+            valueFrom: MAAP "$(self)"
+          type: string
+        granule_name:
+          inputBinding:
+            position: 2
+            shellQuote: false
+            valueFrom: $(self)
+          type: string
+      name: MAAP
+      type: record
+    - fields:
+        role_arn:
+          inputBinding:
+            position: 1
+            shellQuote: false
+            valueFrom: Role "$(self)"
+          type: string
+        source_profile:
+          inputBinding:
+            position: 2
+            shellQuote: false
+            valueFrom: $(self)
+          type: string
+      name: Role
+      type: record
 outputs:
   output_file:
     outputBinding:
@@ -28,10 +108,6 @@ outputs:
   stdout_txt:
     type: stdout
 requirements:
-  EnvVarRequirement:
-    envDef:
-      AWS_ACCESS_KEY_ID: $(inputs.aws_access_key_id)
-      AWS_SECRET_ACCESS_KEY: $(inputs.aws_secret_access_key)
   NetworkAccess:
     networkAccess: true
   ShellCommandRequirement: {}
