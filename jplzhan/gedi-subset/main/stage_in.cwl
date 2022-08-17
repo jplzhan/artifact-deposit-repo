@@ -6,7 +6,7 @@ class: CommandLineTool
 cwlVersion: v1.1
 hints:
   DockerRequirement:
-    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v1
+    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v2
 inputs:
   input_path:
     type:
@@ -38,6 +38,18 @@ inputs:
         aws_secret_access_key:
           inputBinding:
             position: 3
+            shellQuote: false
+            valueFrom: $(self)
+          type: string
+        aws_session_token:
+          inputBinding:
+            position: 4
+            shellQuote: false
+            valueFrom: $(self)
+          type: string
+        region:
+          inputBinding:
+            position: 5
             shellQuote: false
             valueFrom: $(self)
           type: string
