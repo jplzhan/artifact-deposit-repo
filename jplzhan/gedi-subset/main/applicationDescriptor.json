@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.gedi-subset.main",
-            "title": "Updated the commit to the submodule.",
+            "title": "Update Dockerfile",
             "owsContext": {
                 "offering": {
                     "content": {
