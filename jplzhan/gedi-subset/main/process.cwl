@@ -27,6 +27,12 @@ inputs:
       shellQuote: false
       valueFrom: limit "$(self)"
     type: int
+  maappgt:
+    inputBinding:
+      prefix: --parameters
+      shellQuote: false
+      valueFrom: maappgt "$(self)"
+    type: string
   query:
     inputBinding:
       prefix: --parameters
