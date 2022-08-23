@@ -45,6 +45,7 @@ inputs:
       type: record
   columns: string
   limit: int
+  maappgt: string
   query: string
   workflow_aws_access_key_id: string
   workflow_aws_secret_access_key: string
@@ -55,6 +56,7 @@ steps:
       aoi: stage_in_aoi/output_file
       columns: columns
       limit: limit
+      maappgt: maappgt
       query: query
     out:
     - output_nb

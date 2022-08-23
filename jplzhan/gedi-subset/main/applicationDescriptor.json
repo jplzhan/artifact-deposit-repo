@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.gedi-subset.main",
-            "title": "Update Dockerfile",
+            "title": "Update execute.sh",
             "owsContext": {
                 "offering": {
                     "content": {
@@ -49,6 +49,19 @@
                             "dataType": {
                                 "name": [
                                     "int"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "maappgt",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "string"
                                 ]
                             }
                         }
