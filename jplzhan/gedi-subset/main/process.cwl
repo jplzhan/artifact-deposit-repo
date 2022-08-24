@@ -50,4 +50,6 @@ outputs:
     type: File
 requirements:
   ShellCommandRequirement: {}
+  NetworkAccess:
+    networkAccess: true
 stdout: _stdout.txt
