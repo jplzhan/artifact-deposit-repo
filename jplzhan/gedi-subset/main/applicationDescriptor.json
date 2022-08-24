@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.gedi-subset.main",
-            "title": "Update execute.sh",
+            "title": "Added a setup script for interactively debugging this image.",
             "owsContext": {
                 "offering": {
                     "content": {

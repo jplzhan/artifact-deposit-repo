@@ -4,7 +4,7 @@ baseCommand:
 - /home/jovyan/process.ipynb
 - output_nb.ipynb
 class: CommandLineTool
-cwlVersion: v1.0
+cwlVersion: v1.1
 hints:
   DockerRequirement:
     dockerPull: jplzhan/ci-generated-images:jplzhan.gedi-subset.main
@@ -40,6 +40,10 @@ inputs:
       valueFrom: query "$(self)"
     type: string
 outputs:
+  output_dir:
+    outputBinding:
+      glob: output
+    type: Directory
   output_nb:
     outputBinding:
       glob: output_nb.ipynb
