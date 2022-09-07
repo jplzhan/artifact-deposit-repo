@@ -49,7 +49,7 @@ outputs:
       glob: output_nb.ipynb
     type: File
 requirements:
-  ShellCommandRequirement: {}
   NetworkAccess:
     networkAccess: true
+  ShellCommandRequirement: {}
 stdout: _stdout.txt
