@@ -1,0 +1,34 @@
+{
+    "processDescription": {
+        "process": {
+            "id": "jplzhan.maap-ci-stage-io.v5",
+            "title": "Updated stage out to be capable of accepting a config parameter to use in place of the typical AWS credentials.",
+            "owsContext": {
+                "offering": {
+                    "content": {
+                        "href": "https://raw.githubusercontent.com/jplzhan/artifact-deposit-repo/main/jplzhan/maap-ci-stage-io/v5/workflow.cwl"
+                    }
+                }
+            },
+            "abstract": "Application Package Demo",
+            "keywords": [
+                "Demo"
+            ],
+            "inputs": [],
+            "outputs": []
+        },
+        "processVersion": "1.0.0",
+        "jobControlOptions": [
+            "async-execute"
+        ],
+        "outputTransmission": [
+            "reference"
+        ]
+    },
+    "immediateDeployment": true,
+    "executionUnit": [
+        {
+            "href": "docker://jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v5"
+        }
+    ]
+}
