@@ -38,19 +38,29 @@ inputs:
         source_profile: string
       name: Role
       type: record
+    - fields:
+        path: File
+      name: Local
+      type: record
   columns: string
   limit: int
   maappgt: string
   query: string
   stage_out:
-  - fields:
-      aws_access_key_id: string
-      aws_secret_access_key: string
-      aws_session_token: string
-      region: string
-      s3_url: string
-    name: stage_out
-    type: record
+    type:
+    - fields:
+        aws_access_key_id: string
+        aws_secret_access_key: string
+        aws_session_token: string
+        region: string
+        s3_url: string
+      name: STAK
+      type: record
+    - fields:
+        aws_config: Directory
+        s3_url: string
+      name: LTAK
+      type: record
 outputs: {}
 steps:
   process:

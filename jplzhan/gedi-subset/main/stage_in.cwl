@@ -6,7 +6,7 @@ class: CommandLineTool
 cwlVersion: v1.1
 hints:
   DockerRequirement:
-    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v5
+    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v6
 inputs:
   input_path:
     type:
@@ -111,6 +111,15 @@ inputs:
             valueFrom: $(self)
           type: string
       name: Role
+      type: record
+    - fields:
+        path:
+          inputBinding:
+            position: 1
+            shellQuote: false
+            valueFrom: Local "$(self.path)"
+          type: File
+      name: Local
       type: record
 outputs:
   output_file:
