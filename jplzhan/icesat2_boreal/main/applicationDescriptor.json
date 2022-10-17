@@ -1,0 +1,256 @@
+{
+    "processDescription": {
+        "process": {
+            "id": "jplzhan.icesat2_boreal.main",
+            "title": "Modified Dockerfile.",
+            "owsContext": {
+                "offering": {
+                    "content": {
+                        "href": "https://raw.githubusercontent.com/jplzhan/artifact-deposit-repo/main/jplzhan/icesat2_boreal/main/workflow.cwl"
+                    }
+                }
+            },
+            "abstract": "Application Package Demo",
+            "keywords": [
+                "Demo"
+            ],
+            "inputs": [
+                {
+                    "id": "in_atl08_fn",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "string"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "in_topo_fn",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "string"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "in_landsat_fn",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "string"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "DO_SLOPE_VALID_MASK",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "Any"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "in_atl08_sample_fn",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "string"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "in_tile_num",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "float"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "in_tile_fn",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "string"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "in_tile_field",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "string"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "iters",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "float"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "ppside",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "float"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "minDOY",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "float"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "maxDOY",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "float"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "max_sol_el",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "float"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "expand_training",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "Any"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "local_train_perc",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "float"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "min_n",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "float"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "boreal_vect_fn",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "string"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "outputs": []
+        },
+        "processVersion": "1.0.0",
+        "jobControlOptions": [
+            "async-execute"
+        ],
+        "outputTransmission": [
+            "reference"
+        ]
+    },
+    "immediateDeployment": true,
+    "executionUnit": [
+        {
+            "href": "docker://jplzhan/ci-generated-images:jplzhan.icesat2_boreal.main"
+        }
+    ]
+}
