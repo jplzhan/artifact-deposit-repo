@@ -6,7 +6,7 @@ class: CommandLineTool
 cwlVersion: v1.1
 hints:
   DockerRequirement:
-    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v6
+    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v7
 inputs:
   output_dir:
     inputBinding:
@@ -69,6 +69,15 @@ inputs:
             valueFrom: $(self)
           type: string
       name: LTAK
+      type: record
+    - fields:
+        s3_url:
+          inputBinding:
+            position: 3
+            shellQuote: false
+            valueFrom: $(self)
+          type: string
+      name: IAM
       type: record
 outputs: {}
 requirements:
