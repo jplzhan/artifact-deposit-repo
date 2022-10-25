@@ -6,7 +6,7 @@ class: CommandLineTool
 cwlVersion: v1.1
 hints:
   DockerRequirement:
-    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v6
+    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v7
 inputs:
   input_path:
     type:

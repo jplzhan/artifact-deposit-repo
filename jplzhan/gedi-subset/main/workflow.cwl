@@ -61,6 +61,10 @@ inputs:
         s3_url: string
       name: LTAK
       type: record
+    - fields:
+        s3_url: string
+      name: IAM
+      type: record
 outputs: {}
 steps:
   process:
