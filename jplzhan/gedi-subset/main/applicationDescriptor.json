@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.gedi-subset.main",
-            "title": "Added a setup script for interactively debugging this image.",
+            "title": "Update Dockerfile\n\nBugfix to syntax error.",
             "owsContext": {
                 "offering": {
                     "content": {
@@ -63,6 +63,17 @@
                                 "name": [
                                     "string"
                                 ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "aoi",
+                    "title": "Stage-in input specified for URL-to-PATH conversion.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "stage_in"
                             }
                         }
                     ]
