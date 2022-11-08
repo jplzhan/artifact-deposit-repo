@@ -4,7 +4,7 @@ baseCommand:
 - /home/jovyan/process.ipynb
 - output_nb.ipynb
 class: CommandLineTool
-cwlVersion: v1.0
+cwlVersion: v1.1
 hints:
   DockerRequirement:
     dockerPull: jplzhan/ci-generated-images:unity-sds.unity-analytics-bcdp.main
@@ -22,10 +22,16 @@ inputs:
       valueFrom: variable "$(self)"
     type: string
 outputs:
+  output_dir:
+    outputBinding:
+      glob: output
+    type: Directory
   output_nb:
     outputBinding:
       glob: output_nb.ipynb
     type: File
 requirements:
+  NetworkAccess:
+    networkAccess: true
   ShellCommandRequirement: {}
 stdout: _stdout.txt

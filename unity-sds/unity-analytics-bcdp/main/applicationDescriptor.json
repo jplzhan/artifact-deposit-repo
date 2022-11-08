@@ -2,11 +2,11 @@
     "processDescription": {
         "process": {
             "id": "unity-sds.unity-analytics-bcdp.main",
-            "title": "Cleanup for 8/10",
+            "title": "Update environment.yml",
             "owsContext": {
                 "offering": {
                     "content": {
-                        "href": "https://raw.githubusercontent.com/jplzhan/artifact-deposit-repo/main/unity-sds/unity-analytics-bcdp/main/process.cwl"
+                        "href": "https://raw.githubusercontent.com/jplzhan/artifact-deposit-repo/main/unity-sds/unity-analytics-bcdp/main/workflow.cwl"
                     }
                 }
             },
