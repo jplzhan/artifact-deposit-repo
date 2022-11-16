@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.maap-ci-stage-io.v7",
-            "title": "Update stage_in.py\n\nFixed some syntax errors.",
+            "title": "Fixed typo in AWS credentials files.",
             "owsContext": {
                 "offering": {
                     "content": {
