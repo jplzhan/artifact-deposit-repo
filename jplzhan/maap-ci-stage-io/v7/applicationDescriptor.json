@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.maap-ci-stage-io.v7",
-            "title": "Updated stage out to accept no additional key parameters.",
+            "title": "Update stage_in.py\n\nFixed some syntax errors.",
             "owsContext": {
                 "offering": {
                     "content": {
