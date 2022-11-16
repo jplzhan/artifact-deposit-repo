@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.maap-ci-stage-io.v7",
-            "title": "Fixed typo in AWS credentials files.",
+            "title": "Revised AWS credentials writing.",
             "owsContext": {
                 "offering": {
                     "content": {
