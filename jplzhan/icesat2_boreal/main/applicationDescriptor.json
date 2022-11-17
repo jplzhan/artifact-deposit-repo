@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.icesat2_boreal.main",
-            "title": "Update Dockerfile",
+            "title": "Updated miniconda version",
             "owsContext": {
                 "offering": {
                     "content": {
