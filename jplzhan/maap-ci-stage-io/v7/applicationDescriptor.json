@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.maap-ci-stage-io.v7",
-            "title": "The ~/.aws directory is now created before writing credentials.",
+            "title": "Revised credential handling to no longer use files.",
             "owsContext": {
                 "offering": {
                     "content": {
