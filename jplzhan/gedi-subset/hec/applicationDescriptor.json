@@ -1,0 +1,98 @@
+{
+    "processDescription": {
+        "process": {
+            "id": "jplzhan.gedi-subset.hec",
+            "title": "Now tracks the correct branch on the GEDI repo.",
+            "owsContext": {
+                "offering": {
+                    "content": {
+                        "href": "https://raw.githubusercontent.com/jplzhan/artifact-deposit-repo/main/jplzhan/gedi-subset/hec/workflow.cwl"
+                    }
+                }
+            },
+            "abstract": "Application Package Demo",
+            "keywords": [
+                "Demo"
+            ],
+            "inputs": [
+                {
+                    "id": "columns",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "string"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "query",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "string"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "limit",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "int"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "maappgt",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": [
+                                    "string"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "aoi",
+                    "title": "Stage-in input specified for URL-to-PATH conversion.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "stage_in"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "outputs": []
+        },
+        "processVersion": "1.0.0",
+        "jobControlOptions": [
+            "async-execute"
+        ],
+        "outputTransmission": [
+            "reference"
+        ]
+    },
+    "immediateDeployment": true,
+    "executionUnit": [
+        {
+            "href": "docker://jplzhan/ci-generated-images:jplzhan.gedi-subset.hec"
+        }
+    ]
+}
