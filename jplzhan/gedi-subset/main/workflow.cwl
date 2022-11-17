@@ -7,14 +7,6 @@ inputs:
   aoi:
     type:
     - fields:
-        url: string
-      name: HTTP
-      type: record
-    - fields:
-        s3_url: string
-      name: S3_unsigned
-      type: record
-    - fields:
         aws_access_key_id: string
         aws_secret_access_key: string
         aws_session_token: string
@@ -41,6 +33,14 @@ inputs:
     - fields:
         path: File
       name: Local
+      type: record
+    - fields:
+        url: string
+      name: HTTP
+      type: record
+    - fields:
+        s3_url: string
+      name: S3_unsigned
       type: record
   columns: string
   limit: int

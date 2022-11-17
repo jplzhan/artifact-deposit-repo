@@ -11,24 +11,6 @@ inputs:
   input_path:
     type:
     - fields:
-        url:
-          inputBinding:
-            position: 1
-            shellQuote: false
-            valueFrom: HTTP "$(self)"
-          type: string
-      name: HTTP
-      type: record
-    - fields:
-        s3_url:
-          inputBinding:
-            position: 1
-            shellQuote: false
-            valueFrom: S3_unsigned "$(self)"
-          type: string
-      name: S3_unsigned
-      type: record
-    - fields:
         aws_access_key_id:
           inputBinding:
             position: 2
@@ -120,6 +102,24 @@ inputs:
             valueFrom: Local "$(self.path)"
           type: File
       name: Local
+      type: record
+    - fields:
+        url:
+          inputBinding:
+            position: 1
+            shellQuote: false
+            valueFrom: HTTP "$(self)"
+          type: string
+      name: HTTP
+      type: record
+    - fields:
+        s3_url:
+          inputBinding:
+            position: 1
+            shellQuote: false
+            valueFrom: S3_unsigned "$(self)"
+          type: string
+      name: S3_unsigned
       type: record
 outputs:
   output_file:
