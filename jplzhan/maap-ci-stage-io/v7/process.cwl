@@ -2,11 +2,9 @@
 baseCommand:
 - sh
 - process.sh
+- /tmp/inputs.json
 class: CommandLineTool
-cwlVersion: v1.1
-hints:
-  DockerRequirement:
-    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v7
+cwlVersion: v1.2
 inputs: {}
 outputs:
   output_dir:
@@ -18,6 +16,12 @@ outputs:
       glob: output_nb.ipynb
     type: File
 requirements:
+  DockerRequirement:
+    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v7
+  InitialWorkDirRequirement:
+    listing:
+    - entry: $(inputs)
+      entryname: /tmp/inputs.json
   NetworkAccess:
     networkAccess: true
   ShellCommandRequirement: {}
