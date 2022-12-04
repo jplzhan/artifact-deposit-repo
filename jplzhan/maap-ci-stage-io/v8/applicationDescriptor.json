@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.maap-ci-stage-io.v8",
-            "title": "Stage in supports arrays of urls now.",
+            "title": "Lowered logging level to INFO.",
             "owsContext": {
                 "offering": {
                     "content": {
