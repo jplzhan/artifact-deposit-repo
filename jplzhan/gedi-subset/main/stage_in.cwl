@@ -2,133 +2,72 @@
 baseCommand:
 - python3
 - /home/jovyan/stage_in.py
+- /tmp/inputs.json
 class: CommandLineTool
-cwlVersion: v1.1
-hints:
-  DockerRequirement:
-    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v7
+cwlVersion: v1.2
 inputs:
+  cache_dir: Directory?
+  cache_only: boolean?
   input_path:
     type:
     - fields:
-        aws_access_key_id:
-          inputBinding:
-            position: 2
-            shellQuote: false
-            valueFrom: $(self)
-          type: string
-        aws_secret_access_key:
-          inputBinding:
-            position: 3
-            shellQuote: false
-            valueFrom: $(self)
-          type: string
-        aws_session_token:
-          inputBinding:
-            position: 4
-            shellQuote: false
-            valueFrom: $(self)
-          type: string
-        region:
-          inputBinding:
-            position: 5
-            shellQuote: false
-            valueFrom: $(self)
-          type: string
+        aws_access_key_id: string
+        aws_secret_access_key: string
+        aws_session_token: string?
+        region: string?
         s3_url:
-          inputBinding:
-            position: 1
-            shellQuote: false
-            valueFrom: S3 "$(self)"
-          type: string
-      name: S3
+          type:
+          - string
+          - string[]
       type: record
     - fields:
-        password:
-          inputBinding:
-            position: 3
-            shellQuote: false
-            valueFrom: $(self)
-          type: string
+        password: string
         url:
-          inputBinding:
-            position: 1
-            shellQuote: false
-            valueFrom: DAAC "$(self)"
-          type: string
-        username:
-          inputBinding:
-            position: 2
-            shellQuote: false
-            valueFrom: $(self)
-          type: string
-      name: DAAC
+          type:
+          - string
+          - string[]
+        username: string
       type: record
     - fields:
-        collection_id:
-          inputBinding:
-            position: 1
-            shellQuote: false
-            valueFrom: MAAP "$(self)"
-          type: string
-        granule_name:
-          inputBinding:
-            position: 2
-            shellQuote: false
-            valueFrom: $(self)
-          type: string
-      name: MAAP
+        collection_id: string
+        granule_name: string
       type: record
     - fields:
-        role_arn:
-          inputBinding:
-            position: 1
-            shellQuote: false
-            valueFrom: Role "$(self)"
-          type: string
-        source_profile:
-          inputBinding:
-            position: 2
-            shellQuote: false
-            valueFrom: $(self)
-          type: string
-      name: Role
+        role_arn: string
+        source_profile: string
       type: record
     - fields:
         path:
-          inputBinding:
-            position: 1
-            shellQuote: false
-            valueFrom: Local "$(self.path)"
-          type: File
-      name: Local
+          type:
+          - File
+          - File[]
       type: record
     - fields:
         url:
-          inputBinding:
-            position: 1
-            shellQuote: false
-            valueFrom: HTTP "$(self)"
-          type: string
-      name: HTTP
+          type:
+          - string
+          - string[]
       type: record
     - fields:
         s3_url:
-          inputBinding:
-            position: 1
-            shellQuote: false
-            valueFrom: S3_unsigned "$(self)"
-          type: string
-      name: S3_unsigned
+          type:
+          - string
+          - string[]
       type: record
 outputs:
   output_file:
     outputBinding:
-      glob: inputs/*
-    type: File
+      glob: inputs/*/*
+    type: File[]
   stdout_txt:
     type: stdout
 requirements:
+  DockerRequirement:
+    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v8
+  InitialWorkDirRequirement:
+    listing:
+    - entry: $(inputs)
+      entryname: /tmp/inputs.json
   NetworkAccess:
     networkAccess: true
   ShellCommandRequirement: {}

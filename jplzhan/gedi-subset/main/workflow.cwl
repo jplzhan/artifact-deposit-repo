@@ -2,45 +2,53 @@
 $namespaces:
   cwltool: http://commonwl.org/cwltool#
 class: Workflow
-cwlVersion: v1.1
+cwlVersion: v1.2
 inputs:
   aoi:
     type:
     - fields:
         aws_access_key_id: string
         aws_secret_access_key: string
-        aws_session_token: string
-        region: string
-        s3_url: string
-      name: S3
+        aws_session_token: string?
+        region: string?
+        s3_url:
+          type:
+          - string
+          - string[]
       type: record
     - fields:
         password: string
-        url: string
+        url:
+          type:
+          - string
+          - string[]
         username: string
-      name: DAAC
       type: record
     - fields:
         collection_id: string
         granule_name: string
-      name: MAAP
       type: record
     - fields:
         role_arn: string
         source_profile: string
-      name: Role
       type: record
     - fields:
-        path: File
-      name: Local
+        path:
+          type:
+          - File
+          - File[]
       type: record
     - fields:
-        url: string
-      name: HTTP
+        url:
+          type:
+          - string
+          - string[]
       type: record
     - fields:
-        s3_url: string
-      name: S3_unsigned
+        s3_url:
+          type:
+          - string
+          - string[]
       type: record
   columns: string
   limit: int
