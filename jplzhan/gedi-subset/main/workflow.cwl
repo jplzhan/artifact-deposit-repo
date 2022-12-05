@@ -15,6 +15,7 @@ inputs:
           type:
           - string
           - string[]
+      name: S3
       type: record
     - fields:
         password: string
@@ -23,32 +24,38 @@ inputs:
           - string
           - string[]
         username: string
+      name: DAAC
       type: record
     - fields:
         collection_id: string
         granule_name: string
+      name: MAAP
       type: record
     - fields:
         role_arn: string
         source_profile: string
+      name: Role
       type: record
     - fields:
         path:
           type:
           - File
           - File[]
+      name: Local
       type: record
     - fields:
         url:
           type:
           - string
           - string[]
+      name: HTTP
       type: record
     - fields:
         s3_url:
           type:
           - string
           - string[]
+      name: S3_unsigned
       type: record
   columns: string
   limit: int
