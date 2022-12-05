@@ -37,9 +37,20 @@ inputs:
     - fields:
         collection_id: string
         granule_name: string
+        maap_pgt: string
       inputBinding:
         valueFrom: MAAP
       name: MAAP
+      type: record
+    - fields:
+        maap_pgt: string
+        url:
+          type:
+          - string
+          - string[]
+      inputBinding:
+        valueFrom: MAAP_HTTP
+      name: MAAP_HTTP
       type: record
     - fields:
         role_arn: string

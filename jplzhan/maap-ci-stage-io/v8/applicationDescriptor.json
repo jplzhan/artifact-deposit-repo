@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.maap-ci-stage-io.v8",
-            "title": "StageIn renames the file with the list index.",
+            "title": "Adjusted MAAP downloads to work with URLs",
             "owsContext": {
                 "offering": {
                     "content": {
