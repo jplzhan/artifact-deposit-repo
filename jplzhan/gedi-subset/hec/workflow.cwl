@@ -29,7 +29,16 @@ inputs:
     - fields:
         collection_id: string
         granule_name: string
+        maap_pgt: string
       name: MAAP
+      type: record
+    - fields:
+        maap_pgt: string
+        url:
+          type:
+          - string
+          - string[]
+      name: MAAP_HTTP
       type: record
     - fields:
         role_arn: string
