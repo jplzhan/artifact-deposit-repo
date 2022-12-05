@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.gedi-subset.hec",
-            "title": "Now tracks the correct branch on the GEDI repo.",
+            "title": "Updated to stage-in .h5 files.",
             "owsContext": {
                 "offering": {
                     "content": {
@@ -55,20 +55,18 @@
                     ]
                 },
                 {
-                    "id": "maappgt",
-                    "title": "Automatically detected using papermill.",
+                    "id": "aoi",
+                    "title": "Stage-in input specified for URL-to-PATH conversion.",
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "string"
-                                ]
+                                "name": "stage_in"
                             }
                         }
                     ]
                 },
                 {
-                    "id": "aoi",
+                    "id": "granules",
                     "title": "Stage-in input specified for URL-to-PATH conversion.",
                     "literalDataDomains": [
                         {

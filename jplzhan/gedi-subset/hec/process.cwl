@@ -3,42 +3,16 @@ baseCommand:
 - papermill
 - /home/jovyan/process.ipynb
 - output_nb.ipynb
+- -f
+- /tmp/inputs.json
 class: CommandLineTool
-cwlVersion: v1.1
-hints:
-  DockerRequirement:
-    dockerPull: jplzhan/ci-generated-images:jplzhan.gedi-subset.hec
+cwlVersion: v1.2
 inputs:
-  aoi:
-    inputBinding:
-      prefix: --parameters
-      shellQuote: false
-      valueFrom: aoi "$(self.path)"
-    type: File
-  columns:
-    inputBinding:
-      prefix: --parameters
-      shellQuote: false
-      valueFrom: columns "$(self)"
-    type: string
-  limit:
-    inputBinding:
-      prefix: --parameters
-      shellQuote: false
-      valueFrom: limit "$(self)"
-    type: int
-  maappgt:
-    inputBinding:
-      prefix: --parameters
-      shellQuote: false
-      valueFrom: maappgt "$(self)"
-    type: string
-  query:
-    inputBinding:
-      prefix: --parameters
-      shellQuote: false
-      valueFrom: query "$(self)"
-    type: string
+  aoi: File[]
+  columns: string
+  granules: File[]
+  limit: int
+  query: string
 outputs:
   output_dir:
     outputBinding:
@@ -49,6 +23,12 @@ outputs:
       glob: output_nb.ipynb
     type: File
 requirements:
+  DockerRequirement:
+    dockerPull: jplzhan/ci-generated-images:jplzhan.gedi-subset.hec
+  InitialWorkDirRequirement:
+    listing:
+    - entry: $(inputs)
+      entryname: /tmp/inputs.json
   NetworkAccess:
     networkAccess: true
   ShellCommandRequirement: {}

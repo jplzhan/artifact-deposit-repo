@@ -2,21 +2,27 @@
 $namespaces:
   cwltool: http://commonwl.org/cwltool#
 class: Workflow
-cwlVersion: v1.1
+cwlVersion: v1.2
 inputs:
   aoi:
-    type:
+    type: &id001
     - fields:
         aws_access_key_id: string
         aws_secret_access_key: string
-        aws_session_token: string
-        region: string
-        s3_url: string
+        aws_session_token: string?
+        region: string?
+        s3_url:
+          type:
+          - string
+          - string[]
       name: S3
       type: record
     - fields:
         password: string
-        url: string
+        url:
+          type:
+          - string
+          - string[]
         username: string
       name: DAAC
       type: record
@@ -31,20 +37,30 @@ inputs:
       name: Role
       type: record
     - fields:
-        path: File
+        path:
+          type:
+          - File
+          - File[]
       name: Local
       type: record
     - fields:
-        url: string
+        url:
+          type:
+          - string
+          - string[]
       name: HTTP
       type: record
     - fields:
-        s3_url: string
+        s3_url:
+          type:
+          - string
+          - string[]
       name: S3_unsigned
       type: record
   columns: string
+  granules:
+    type: *id001
   limit: int
-  maappgt: string
   query: string
   stage_out:
     type:
@@ -71,8 +87,8 @@ steps:
     in:
       aoi: stage_in_aoi/output_file
       columns: columns
+      granules: stage_in_granules/output_file
       limit: limit
-      maappgt: maappgt
       query: query
     out:
     - output_nb
@@ -81,6 +97,12 @@ steps:
   stage_in_aoi:
     in:
       input_path: aoi
+    out:
+    - output_file
+    run: stage_in.cwl
+  stage_in_granules:
+    in:
+      input_path: granules
     out:
     - output_file
     run: stage_in.cwl
