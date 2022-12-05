@@ -19,6 +19,8 @@ inputs:
           type:
           - string
           - string[]
+      inputBinding:
+        valueFrom: S3
       type: record
     - fields:
         password: string
@@ -27,32 +29,44 @@ inputs:
           - string
           - string[]
         username: string
+      inputBinding:
+        valueFrom: DAAC
       type: record
     - fields:
         collection_id: string
         granule_name: string
+      inputBinding:
+        valueFrom: MAAP
       type: record
     - fields:
         role_arn: string
         source_profile: string
+      inputBinding:
+        valueFrom: Role
       type: record
     - fields:
         path:
           type:
           - File
           - File[]
+      inputBinding:
+        valueFrom: Local
       type: record
     - fields:
         url:
           type:
           - string
           - string[]
+      inputBinding:
+        valueFrom: HTTP
       type: record
     - fields:
         s3_url:
           type:
           - string
           - string[]
+      inputBinding:
+        valueFrom: S3_unsigned
       type: record
 outputs:
   output_file:
