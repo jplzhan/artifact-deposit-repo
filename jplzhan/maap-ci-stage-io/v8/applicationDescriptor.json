@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.maap-ci-stage-io.v8",
-            "title": "Adjusted MAAP downloads to work with URLs",
+            "title": "Fixed an issue where MAAP_HTTP wasn't in the staging map.",
             "owsContext": {
                 "offering": {
                     "content": {
