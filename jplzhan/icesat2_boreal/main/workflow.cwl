@@ -2,7 +2,7 @@
 $namespaces:
   cwltool: http://commonwl.org/cwltool#
 class: Workflow
-cwlVersion: v1.1
+cwlVersion: v1.2
 inputs:
   DO_SLOPE_VALID_MASK: Any
   boreal_vect_fn: string
