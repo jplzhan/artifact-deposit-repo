@@ -5,15 +5,15 @@ class: Workflow
 cwlVersion: v1.2
 inputs:
   DO_SLOPE_VALID_MASK: Any
-  boreal_vect_fn: string
+  boreal_vect: string
   expand_training: Any
-  in_atl08_fn: string
-  in_atl08_sample_fn: string
-  in_landsat_fn: string
+  in_atl08: string
+  in_atl08_sample: string
+  in_landsat: string
+  in_tile: string
   in_tile_field: string
-  in_tile_fn: string
   in_tile_num: float
-  in_topo_fn: string
+  in_topo: string
   iters: float
   local_train_perc: float
   maxDOY: float
@@ -45,15 +45,15 @@ steps:
   process:
     in:
       DO_SLOPE_VALID_MASK: DO_SLOPE_VALID_MASK
-      boreal_vect_fn: boreal_vect_fn
+      boreal_vect: boreal_vect
       expand_training: expand_training
-      in_atl08_fn: in_atl08_fn
-      in_atl08_sample_fn: in_atl08_sample_fn
-      in_landsat_fn: in_landsat_fn
+      in_atl08: in_atl08
+      in_atl08_sample: in_atl08_sample
+      in_landsat: in_landsat
+      in_tile: in_tile
       in_tile_field: in_tile_field
-      in_tile_fn: in_tile_fn
       in_tile_num: in_tile_num
-      in_topo_fn: in_topo_fn
+      in_topo: in_topo
       iters: iters
       local_train_perc: local_train_perc
       maxDOY: maxDOY
