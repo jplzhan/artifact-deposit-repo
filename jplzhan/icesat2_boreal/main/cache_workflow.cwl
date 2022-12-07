@@ -6,7 +6,7 @@ cwlVersion: v1.2
 inputs:
   cache_dir: Directory?
   cache_only:
-    default: false
+    default: true
     type: boolean
   parameters:
     type:
@@ -92,7 +92,7 @@ steps:
   stage_in_boreal_vect:
     in:
       cache_dir: cache_dir
-      cache_only: true
+      cache_only: cache_only
       input_path:
         source: parameters
         valueFrom: $(self.boreal_vect)
@@ -102,7 +102,7 @@ steps:
   stage_in_in_atl08:
     in:
       cache_dir: cache_dir
-      cache_only: true
+      cache_only: cache_only
       input_path:
         source: parameters
         valueFrom: $(self.in_atl08)
@@ -112,7 +112,7 @@ steps:
   stage_in_in_atl08_sample:
     in:
       cache_dir: cache_dir
-      cache_only: true
+      cache_only: cache_only
       input_path:
         source: parameters
         valueFrom: $(self.in_atl08_sample)
@@ -122,7 +122,7 @@ steps:
   stage_in_in_landsat:
     in:
       cache_dir: cache_dir
-      cache_only: true
+      cache_only: cache_only
       input_path:
         source: parameters
         valueFrom: $(self.in_landsat)
@@ -132,7 +132,7 @@ steps:
   stage_in_in_tile:
     in:
       cache_dir: cache_dir
-      cache_only: true
+      cache_only: cache_only
       input_path:
         source: parameters
         valueFrom: $(self.in_tile)
@@ -142,7 +142,7 @@ steps:
   stage_in_in_topo:
     in:
       cache_dir: cache_dir
-      cache_only: true
+      cache_only: cache_only
       input_path:
         source: parameters
         valueFrom: $(self.in_topo)
