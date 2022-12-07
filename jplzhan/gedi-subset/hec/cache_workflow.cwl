@@ -6,7 +6,7 @@ cwlVersion: v1.2
 inputs:
   cache_dir: Directory?
   cache_only:
-    default: false
+    default: true
     type: boolean
   parameters:
     type:
@@ -84,7 +84,7 @@ steps:
   stage_in_aoi:
     in:
       cache_dir: cache_dir
-      cache_only: true
+      cache_only: cache_only
       input_path:
         source: parameters
         valueFrom: $(self.aoi)
@@ -94,7 +94,7 @@ steps:
   stage_in_granules:
     in:
       cache_dir: cache_dir
-      cache_only: true
+      cache_only: cache_only
       input_path:
         source: parameters
         valueFrom: $(self.granules)
