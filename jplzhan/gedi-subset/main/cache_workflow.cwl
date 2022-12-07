@@ -82,7 +82,7 @@ steps:
   stage_in_aoi:
     in:
       cache_dir: cache_dir
-      cache_only: true
+      cache_only: cache_only
       input_path:
         source: parameters
         valueFrom: $(self.aoi)
