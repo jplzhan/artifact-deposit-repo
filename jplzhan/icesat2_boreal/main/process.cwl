@@ -8,23 +8,23 @@ baseCommand:
 class: CommandLineTool
 cwlVersion: v1.2
 inputs:
-  DO_SLOPE_VALID_MASK: Any
+  DO_SLOPE_VALID_MASK: boolean
   boreal_vect: string
-  expand_training: Any
+  expand_training: boolean
   in_atl08: string
   in_atl08_sample: string
   in_landsat: string
   in_tile: string
   in_tile_field: string
-  in_tile_num: float
+  in_tile_num: int
   in_topo: string
-  iters: float
-  local_train_perc: float
-  maxDOY: float
-  max_sol_el: float
-  minDOY: float
-  min_n: float
-  ppside: float
+  iters: int
+  local_train_perc: int
+  maxDOY: int
+  max_sol_el: int
+  minDOY: int
+  min_n: int
+  ppside: int
 outputs:
   output_dir:
     outputBinding:

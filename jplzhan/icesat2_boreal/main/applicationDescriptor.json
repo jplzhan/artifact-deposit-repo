@@ -21,9 +21,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "string"
-                                ]
+                                "name": "string"
                             }
                         }
                     ]
@@ -34,9 +32,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "string"
-                                ]
+                                "name": "string"
                             }
                         }
                     ]
@@ -47,9 +43,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "string"
-                                ]
+                                "name": "string"
                             }
                         }
                     ]
@@ -60,9 +54,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "Any"
-                                ]
+                                "name": "boolean"
                             }
                         }
                     ]
@@ -73,9 +65,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "string"
-                                ]
+                                "name": "string"
                             }
                         }
                     ]
@@ -86,9 +76,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "float"
-                                ]
+                                "name": "int"
                             }
                         }
                     ]
@@ -99,9 +87,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "string"
-                                ]
+                                "name": "string"
                             }
                         }
                     ]
@@ -112,9 +98,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "string"
-                                ]
+                                "name": "string"
                             }
                         }
                     ]
@@ -125,9 +109,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "float"
-                                ]
+                                "name": "int"
                             }
                         }
                     ]
@@ -138,9 +120,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "float"
-                                ]
+                                "name": "int"
                             }
                         }
                     ]
@@ -151,9 +131,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "float"
-                                ]
+                                "name": "int"
                             }
                         }
                     ]
@@ -164,9 +142,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "float"
-                                ]
+                                "name": "int"
                             }
                         }
                     ]
@@ -177,9 +153,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "float"
-                                ]
+                                "name": "int"
                             }
                         }
                     ]
@@ -190,9 +164,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "Any"
-                                ]
+                                "name": "boolean"
                             }
                         }
                     ]
@@ -203,9 +175,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "float"
-                                ]
+                                "name": "int"
                             }
                         }
                     ]
@@ -216,9 +186,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "float"
-                                ]
+                                "name": "int"
                             }
                         }
                     ]
@@ -229,9 +197,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "string"
-                                ]
+                                "name": "string"
                             }
                         }
                     ]

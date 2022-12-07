@@ -4,23 +4,32 @@ $namespaces:
 class: Workflow
 cwlVersion: v1.2
 inputs:
-  DO_SLOPE_VALID_MASK: Any
-  boreal_vect: string
-  expand_training: Any
-  in_atl08: string
-  in_atl08_sample: string
-  in_landsat: string
-  in_tile: string
-  in_tile_field: string
-  in_tile_num: float
-  in_topo: string
-  iters: float
-  local_train_perc: float
-  maxDOY: float
-  max_sol_el: float
-  minDOY: float
-  min_n: float
-  ppside: float
+  cache_dir: Directory?
+  cache_only:
+    default: false
+    type: boolean
+  parameters:
+    type:
+      fields:
+        DO_SLOPE_VALID_MASK: boolean
+        boreal_vect: string
+        expand_training: boolean
+        in_atl08: string
+        in_atl08_sample: string
+        in_landsat: string
+        in_tile: string
+        in_tile_field: string
+        in_tile_num: int
+        in_topo: string
+        iters: int
+        local_train_perc: int
+        maxDOY: int
+        max_sol_el: int
+        minDOY: int
+        min_n: int
+        ppside: int
+      name: parameters
+      type: record
   stage_out:
     type:
     - fields:
@@ -41,26 +50,62 @@ inputs:
       name: IAM
       type: record
 outputs: {}
+requirements:
+  StepInputExpressionRequirement: {}
 steps:
   process:
     in:
-      DO_SLOPE_VALID_MASK: DO_SLOPE_VALID_MASK
-      boreal_vect: boreal_vect
-      expand_training: expand_training
-      in_atl08: in_atl08
-      in_atl08_sample: in_atl08_sample
-      in_landsat: in_landsat
-      in_tile: in_tile
-      in_tile_field: in_tile_field
-      in_tile_num: in_tile_num
-      in_topo: in_topo
-      iters: iters
-      local_train_perc: local_train_perc
-      maxDOY: maxDOY
-      max_sol_el: max_sol_el
-      minDOY: minDOY
-      min_n: min_n
-      ppside: ppside
+      DO_SLOPE_VALID_MASK:
+        source: parameters
+        valueFrom: $(self.DO_SLOPE_VALID_MASK)
+      boreal_vect:
+        source: parameters
+        valueFrom: $(self.boreal_vect)
+      expand_training:
+        source: parameters
+        valueFrom: $(self.expand_training)
+      in_atl08:
+        source: parameters
+        valueFrom: $(self.in_atl08)
+      in_atl08_sample:
+        source: parameters
+        valueFrom: $(self.in_atl08_sample)
+      in_landsat:
+        source: parameters
+        valueFrom: $(self.in_landsat)
+      in_tile:
+        source: parameters
+        valueFrom: $(self.in_tile)
+      in_tile_field:
+        source: parameters
+        valueFrom: $(self.in_tile_field)
+      in_tile_num:
+        source: parameters
+        valueFrom: $(self.in_tile_num)
+      in_topo:
+        source: parameters
+        valueFrom: $(self.in_topo)
+      iters:
+        source: parameters
+        valueFrom: $(self.iters)
+      local_train_perc:
+        source: parameters
+        valueFrom: $(self.local_train_perc)
+      maxDOY:
+        source: parameters
+        valueFrom: $(self.maxDOY)
+      max_sol_el:
+        source: parameters
+        valueFrom: $(self.max_sol_el)
+      minDOY:
+        source: parameters
+        valueFrom: $(self.minDOY)
+      min_n:
+        source: parameters
+        valueFrom: $(self.min_n)
+      ppside:
+        source: parameters
+        valueFrom: $(self.ppside)
     out:
     - output_nb
     - output_dir
