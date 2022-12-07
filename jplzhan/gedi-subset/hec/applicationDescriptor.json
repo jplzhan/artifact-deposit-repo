@@ -21,9 +21,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "string"
-                                ]
+                                "name": "string"
                             }
                         }
                     ]
@@ -34,9 +32,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "string"
-                                ]
+                                "name": "string"
                             }
                         }
                     ]
@@ -47,9 +43,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "int"
-                                ]
+                                "name": "int"
                             }
                         }
                     ]
