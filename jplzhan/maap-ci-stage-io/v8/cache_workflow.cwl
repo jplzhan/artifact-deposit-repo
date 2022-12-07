@@ -6,7 +6,7 @@ cwlVersion: v1.2
 inputs:
   cache_dir: Directory?
   cache_only:
-    default: false
+    default: true
     type: boolean
   parameters:
     type:

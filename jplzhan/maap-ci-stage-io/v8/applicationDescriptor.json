@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.maap-ci-stage-io.v8",
-            "title": "Fixed an issue where MAAP_HTTP wasn't in the staging map.",
+            "title": "Fixed MAAP_HTTP",
             "owsContext": {
                 "offering": {
                     "content": {
