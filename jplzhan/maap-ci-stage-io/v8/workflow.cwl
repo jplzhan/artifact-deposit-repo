@@ -4,6 +4,15 @@ $namespaces:
 class: Workflow
 cwlVersion: v1.2
 inputs:
+  cache_dir: Directory?
+  cache_only:
+    default: false
+    type: boolean
+  parameters:
+    type:
+      fields: {}
+      name: parameters
+      type: record
   stage_out:
     type:
     - fields:
@@ -24,6 +33,8 @@ inputs:
       name: IAM
       type: record
 outputs: {}
+requirements:
+  StepInputExpressionRequirement: {}
 steps:
   process:
     in: {}
