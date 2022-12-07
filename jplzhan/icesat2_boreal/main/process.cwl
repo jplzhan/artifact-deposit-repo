@@ -9,15 +9,15 @@ class: CommandLineTool
 cwlVersion: v1.2
 inputs:
   DO_SLOPE_VALID_MASK: boolean
-  boreal_vect: string
+  boreal_vect: File[]
   expand_training: boolean
-  in_atl08: string
-  in_atl08_sample: string
-  in_landsat: string
-  in_tile: string
+  in_atl08: File[]
+  in_atl08_sample: File[]
+  in_landsat: File[]
+  in_tile: File[]
   in_tile_field: string
   in_tile_num: int
-  in_topo: string
+  in_topo: File[]
   iters: int
   local_train_perc: int
   maxDOY: int

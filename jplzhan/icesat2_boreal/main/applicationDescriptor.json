@@ -16,39 +16,6 @@
             ],
             "inputs": [
                 {
-                    "id": "in_atl08",
-                    "title": "Automatically detected using papermill.",
-                    "literalDataDomains": [
-                        {
-                            "dataType": {
-                                "name": "string"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "id": "in_topo",
-                    "title": "Automatically detected using papermill.",
-                    "literalDataDomains": [
-                        {
-                            "dataType": {
-                                "name": "string"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "id": "in_landsat",
-                    "title": "Automatically detected using papermill.",
-                    "literalDataDomains": [
-                        {
-                            "dataType": {
-                                "name": "string"
-                            }
-                        }
-                    ]
-                },
-                {
                     "id": "DO_SLOPE_VALID_MASK",
                     "title": "Automatically detected using papermill.",
                     "literalDataDomains": [
@@ -60,34 +27,12 @@
                     ]
                 },
                 {
-                    "id": "in_atl08_sample",
-                    "title": "Automatically detected using papermill.",
-                    "literalDataDomains": [
-                        {
-                            "dataType": {
-                                "name": "string"
-                            }
-                        }
-                    ]
-                },
-                {
                     "id": "in_tile_num",
                     "title": "Automatically detected using papermill.",
                     "literalDataDomains": [
                         {
                             "dataType": {
                                 "name": "int"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "id": "in_tile",
-                    "title": "Automatically detected using papermill.",
-                    "literalDataDomains": [
-                        {
-                            "dataType": {
-                                "name": "string"
                             }
                         }
                     ]
@@ -192,12 +137,67 @@
                     ]
                 },
                 {
-                    "id": "boreal_vect",
-                    "title": "Automatically detected using papermill.",
+                    "id": "in_atl08",
+                    "title": "Stage-in input specified for URL-to-PATH conversion.",
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": "string"
+                                "name": "stage_in"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "in_topo",
+                    "title": "Stage-in input specified for URL-to-PATH conversion.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "stage_in"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "in_landsat",
+                    "title": "Stage-in input specified for URL-to-PATH conversion.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "stage_in"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "in_atl08_sample",
+                    "title": "Stage-in input specified for URL-to-PATH conversion.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "stage_in"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "in_tile",
+                    "title": "Stage-in input specified for URL-to-PATH conversion.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "stage_in"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "boreal_vect",
+                    "title": "Stage-in input specified for URL-to-PATH conversion.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "stage_in"
                             }
                         }
                     ]
