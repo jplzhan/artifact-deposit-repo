@@ -29,6 +29,12 @@ requirements:
     listing:
     - entry: $(inputs)
       entryname: /tmp/inputs.json
+    - entry: $(inputs.aoi)
+      writable: true
+    - entry: $(inputs.granules)
+      writable: true
+  InplaceUpdateRequirement:
+    inplaceUpdate: true
   NetworkAccess:
     networkAccess: true
   ShellCommandRequirement: {}
