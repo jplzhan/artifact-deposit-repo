@@ -95,7 +95,7 @@ outputs:
     type: stdout
 requirements:
   DockerRequirement:
-    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v8
+    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v9
   InitialWorkDirRequirement:
     listing:
     - entry: $(inputs)
