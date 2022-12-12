@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.maap-ci-stage-io.v9",
-            "title": "Added safety check for parent directory.",
+            "title": "Fixed syntax error with cache_dir.",
             "owsContext": {
                 "offering": {
                     "content": {
