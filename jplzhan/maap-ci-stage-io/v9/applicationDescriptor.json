@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.maap-ci-stage-io.v9",
-            "title": "Removed usage of := to maintain compatability.",
+            "title": "Added safety check for parent directory.",
             "owsContext": {
                 "offering": {
                     "content": {
