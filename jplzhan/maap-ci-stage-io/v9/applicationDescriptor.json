@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.maap-ci-stage-io.v9",
-            "title": "Fixed incorrect usage of cache_dir",
+            "title": "Catche errors when pwd.getpwid throws",
             "owsContext": {
                 "offering": {
                     "content": {
