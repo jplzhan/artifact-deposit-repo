@@ -41,6 +41,26 @@ requirements:
     listing:
     - entry: $(inputs)
       entryname: /tmp/inputs.json
+    - entry: $(inputs.in_atl08)
+      entryname: $(inputs.in_atl08.path)
+      writable: true
+    - entry: $(inputs.in_topo)
+      entryname: $(inputs.in_topo.path)
+      writable: true
+    - entry: $(inputs.in_landsat)
+      entryname: $(inputs.in_landsat.path)
+      writable: true
+    - entry: $(inputs.in_atl08_sample)
+      entryname: $(inputs.in_atl08_sample.path)
+      writable: true
+    - entry: $(inputs.in_tile)
+      entryname: $(inputs.in_tile.path)
+      writable: true
+    - entry: $(inputs.boreal_vect)
+      entryname: $(inputs.boreal_vect.path)
+      writable: true
+  InplaceUpdateRequirement:
+    inplaceUpdate: true
   NetworkAccess:
     networkAccess: true
   ShellCommandRequirement: {}
