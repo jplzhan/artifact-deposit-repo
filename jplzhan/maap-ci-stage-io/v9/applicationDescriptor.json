@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.maap-ci-stage-io.v9",
-            "title": "Fixed another unsafe copy bug",
+            "title": "Prevents crashes when there is no integrity_func",
             "owsContext": {
                 "offering": {
                     "content": {
