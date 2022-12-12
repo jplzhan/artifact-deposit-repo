@@ -30,8 +30,10 @@ requirements:
     - entry: $(inputs)
       entryname: /tmp/inputs.json
     - entry: $(inputs.aoi)
+      entryname: $(inputs.aoi.path)
       writable: true
     - entry: $(inputs.granules)
+      entryname: $(inputs.granules.path)
       writable: true
   InplaceUpdateRequirement:
     inplaceUpdate: true
