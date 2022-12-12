@@ -100,6 +100,11 @@ requirements:
     listing:
     - entry: $(inputs)
       entryname: /tmp/inputs.json
+    - entry: $(inputs.cache_dir)
+      entryname: $(inputs.cache_dir.path)
+      writable: true
+  InplaceUpdateRequirement:
+    inplaceUpdate: true
   NetworkAccess:
     networkAccess: true
   ShellCommandRequirement: {}
