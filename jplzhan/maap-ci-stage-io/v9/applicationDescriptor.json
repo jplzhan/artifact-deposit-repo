@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.maap-ci-stage-io.v9",
-            "title": "Fixed printing of exception message.",
+            "title": "Removed usage of pwd.getpwdid",
             "owsContext": {
                 "offering": {
                     "content": {
