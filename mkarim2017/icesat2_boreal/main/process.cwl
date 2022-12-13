@@ -41,6 +41,8 @@ requirements:
     listing:
     - entry: $(inputs)
       entryname: /tmp/inputs.json
+  InplaceUpdateRequirement:
+    inplaceUpdate: true
   NetworkAccess:
     networkAccess: true
   ShellCommandRequirement: {}

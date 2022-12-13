@@ -95,11 +95,16 @@ outputs:
     type: stdout
 requirements:
   DockerRequirement:
-    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v8
+    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v9
   InitialWorkDirRequirement:
     listing:
     - entry: $(inputs)
       entryname: /tmp/inputs.json
+    - entry: $(inputs.cache_dir)
+      entryname: $(inputs.cache_dir.path)
+      writable: true
+  InplaceUpdateRequirement:
+    inplaceUpdate: true
   NetworkAccess:
     networkAccess: true
   ShellCommandRequirement: {}
