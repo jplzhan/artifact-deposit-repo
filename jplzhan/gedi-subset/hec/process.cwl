@@ -9,8 +9,11 @@ class: CommandLineTool
 cwlVersion: v1.2
 inputs:
   aoi: File[]
+  beams: string
   columns: string
   granules: File[]
+  lat: string
+  lon: string
   query: string
 outputs:
   output_dir:

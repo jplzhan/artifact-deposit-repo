@@ -73,9 +73,12 @@ inputs:
                 - string[]
             name: S3_unsigned
             type: record
+        beams: string
         columns: string
         granules:
           type: *id001
+        lat: string
+        lon: string
         query: string
       name: parameters
       type: record
@@ -105,10 +108,19 @@ steps:
   process:
     in:
       aoi: stage_in_aoi/output_file
+      beams:
+        source: parameters
+        valueFrom: $(self.beams)
       columns:
         source: parameters
         valueFrom: $(self.columns)
       granules: stage_in_granules/output_file
+      lat:
+        source: parameters
+        valueFrom: $(self.lat)
+      lon:
+        source: parameters
+        valueFrom: $(self.lon)
       query:
         source: parameters
         valueFrom: $(self.query)

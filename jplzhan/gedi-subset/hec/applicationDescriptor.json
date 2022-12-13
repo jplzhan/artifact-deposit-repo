@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.gedi-subset.hec",
-            "title": "Removed the limit option as well.",
+            "title": "Added the lat, lon, and beams options.",
             "owsContext": {
                 "offering": {
                     "content": {
@@ -28,6 +28,39 @@
                 },
                 {
                     "id": "query",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "lat",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "lon",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "beams",
                     "title": "Automatically detected using papermill.",
                     "literalDataDomains": [
                         {
