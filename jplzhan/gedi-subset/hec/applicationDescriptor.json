@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.gedi-subset.hec",
-            "title": "Updated to stage-in .h5 files.",
+            "title": "Forgot to import os",
             "owsContext": {
                 "offering": {
                     "content": {
