@@ -11,7 +11,6 @@ inputs:
   aoi: File[]
   columns: string
   granules: File[]
-  limit: int
   query: string
 outputs:
   output_dir:

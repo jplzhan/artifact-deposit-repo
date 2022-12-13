@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.gedi-subset.hec",
-            "title": "Deleted the --cmr-host version.",
+            "title": "Removed the limit option as well.",
             "owsContext": {
                 "offering": {
                     "content": {
@@ -33,17 +33,6 @@
                         {
                             "dataType": {
                                 "name": "string"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "id": "limit",
-                    "title": "Automatically detected using papermill.",
-                    "literalDataDomains": [
-                        {
-                            "dataType": {
-                                "name": "int"
                             }
                         }
                     ]

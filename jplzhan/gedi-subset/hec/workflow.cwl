@@ -76,7 +76,6 @@ inputs:
         columns: string
         granules:
           type: *id001
-        limit: int
         query: string
       name: parameters
       type: record
@@ -110,9 +109,6 @@ steps:
         source: parameters
         valueFrom: $(self.columns)
       granules: stage_in_granules/output_file
-      limit:
-        source: parameters
-        valueFrom: $(self.limit)
       query:
         source: parameters
         valueFrom: $(self.query)
