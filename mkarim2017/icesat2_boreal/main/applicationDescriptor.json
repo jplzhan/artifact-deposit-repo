@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "mkarim2017.icesat2_boreal.main",
-            "title": "Adjusted notebook to use lists for stage-in inputs.",
+            "title": "added $ for parameter in_tile_num",
             "owsContext": {
                 "offering": {
                     "content": {

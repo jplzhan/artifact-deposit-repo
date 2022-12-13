@@ -38,7 +38,7 @@ inputs:
             shellQuote: false
             valueFrom: $(self)
           type: string
-        region:
+        region_name:
           inputBinding:
             position: 7
             shellQuote: false
