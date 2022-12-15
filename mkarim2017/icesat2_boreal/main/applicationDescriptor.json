@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "mkarim2017.icesat2_boreal.main",
-            "title": "added $ for parameter in_tile_num",
+            "title": "missing $",
             "owsContext": {
                 "offering": {
                     "content": {
