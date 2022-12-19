@@ -6,7 +6,11 @@ baseCommand:
 class: CommandLineTool
 cwlVersion: v1.2
 inputs:
-  cache_dir: Directory?
+  cache_dir:
+    inputBinding:
+      shellQuote: false
+      valueFrom: -c $(runtime.outdir)/cache_dir
+    type: Directory?
   cache_only: boolean?
   input_path:
     type:
@@ -87,7 +91,11 @@ inputs:
       name: S3_unsigned
       type: record
 outputs:
-  output_file:
+  cache_out:
+    outputBinding:
+      glob: $(runtime.outdir)/cache_dir
+    type: Directory?
+  output_files:
     outputBinding:
       glob: inputs/*/*
     type: File[]
@@ -101,7 +109,7 @@ requirements:
     - entry: $(inputs)
       entryname: /tmp/inputs.json
     - entry: $(inputs.cache_dir)
-      entryname: $(inputs.cache_dir.path)
+      entryname: $(runtime.outdir)/cache_dir
       writable: true
   InplaceUpdateRequirement:
     inplaceUpdate: true

@@ -107,14 +107,14 @@ requirements:
 steps:
   process:
     in:
-      aoi: stage_in_aoi/output_file
+      aoi: stage_in_aoi/output_files
       beams:
         source: parameters
         valueFrom: $(self.beams)
       columns:
         source: parameters
         valueFrom: $(self.columns)
-      granules: stage_in_granules/output_file
+      granules: stage_in_granules/output_files
       lat:
         source: parameters
         valueFrom: $(self.lat)
@@ -136,17 +136,19 @@ steps:
         source: parameters
         valueFrom: $(self.aoi)
     out:
-    - output_file
+    - cache_out
+    - output_files
     run: stage_in.cwl
   stage_in_granules:
     in:
-      cache_dir: cache_dir
+      cache_dir: stage_in_aoi/cache_out
       cache_only: cache_only
       input_path:
         source: parameters
         valueFrom: $(self.granules)
     out:
-    - output_file
+    - cache_out
+    - output_files
     run: stage_in.cwl
   stage_out:
     in:
