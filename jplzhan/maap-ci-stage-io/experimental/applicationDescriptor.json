@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "jplzhan.maap-ci-stage-io.experimental",
-            "title": "Added provision to use caching directory from command line.",
+            "title": "Changed the default value of cache_dir to an empty string.",
             "owsContext": {
                 "offering": {
                     "content": {
