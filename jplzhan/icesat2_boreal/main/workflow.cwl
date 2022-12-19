@@ -124,21 +124,21 @@ steps:
       DO_SLOPE_VALID_MASK:
         source: parameters
         valueFrom: $(self.DO_SLOPE_VALID_MASK)
-      boreal_vect: stage_in_boreal_vect/output_file
+      boreal_vect: stage_in_boreal_vect/output_files
       expand_training:
         source: parameters
         valueFrom: $(self.expand_training)
-      in_atl08: stage_in_in_atl08/output_file
-      in_atl08_sample: stage_in_in_atl08_sample/output_file
-      in_landsat: stage_in_in_landsat/output_file
-      in_tile: stage_in_in_tile/output_file
+      in_atl08: stage_in_in_atl08/output_files
+      in_atl08_sample: stage_in_in_atl08_sample/output_files
+      in_landsat: stage_in_in_landsat/output_files
+      in_tile: stage_in_in_tile/output_files
       in_tile_field:
         source: parameters
         valueFrom: $(self.in_tile_field)
       in_tile_num:
         source: parameters
         valueFrom: $(self.in_tile_num)
-      in_topo: stage_in_in_topo/output_file
+      in_topo: stage_in_in_topo/output_files
       iters:
         source: parameters
         valueFrom: $(self.iters)
@@ -166,13 +166,14 @@ steps:
     run: process.cwl
   stage_in_boreal_vect:
     in:
-      cache_dir: cache_dir
+      cache_dir: stage_in_in_tile/cache_out
       cache_only: cache_only
       input_path:
         source: parameters
         valueFrom: $(self.boreal_vect)
     out:
-    - output_file
+    - cache_out
+    - output_files
     run: stage_in.cwl
   stage_in_in_atl08:
     in:
@@ -182,47 +183,52 @@ steps:
         source: parameters
         valueFrom: $(self.in_atl08)
     out:
-    - output_file
+    - cache_out
+    - output_files
     run: stage_in.cwl
   stage_in_in_atl08_sample:
     in:
-      cache_dir: cache_dir
+      cache_dir: stage_in_in_landsat/cache_out
       cache_only: cache_only
       input_path:
         source: parameters
         valueFrom: $(self.in_atl08_sample)
     out:
-    - output_file
+    - cache_out
+    - output_files
     run: stage_in.cwl
   stage_in_in_landsat:
     in:
-      cache_dir: cache_dir
+      cache_dir: stage_in_in_topo/cache_out
       cache_only: cache_only
       input_path:
         source: parameters
         valueFrom: $(self.in_landsat)
     out:
-    - output_file
+    - cache_out
+    - output_files
     run: stage_in.cwl
   stage_in_in_tile:
     in:
-      cache_dir: cache_dir
+      cache_dir: stage_in_in_atl08_sample/cache_out
       cache_only: cache_only
       input_path:
         source: parameters
         valueFrom: $(self.in_tile)
     out:
-    - output_file
+    - cache_out
+    - output_files
     run: stage_in.cwl
   stage_in_in_topo:
     in:
-      cache_dir: cache_dir
+      cache_dir: stage_in_in_atl08/cache_out
       cache_only: cache_only
       input_path:
         source: parameters
         valueFrom: $(self.in_topo)
     out:
-    - output_file
+    - cache_out
+    - output_files
     run: stage_in.cwl
   stage_out:
     in:
