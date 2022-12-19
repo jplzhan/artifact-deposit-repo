@@ -104,7 +104,7 @@ requirements:
 steps:
   process:
     in:
-      aoi: stage_in_aoi/output_file
+      aoi: stage_in_aoi/output_files
       columns:
         source: parameters
         valueFrom: $(self.columns)
@@ -129,7 +129,8 @@ steps:
         source: parameters
         valueFrom: $(self.aoi)
     out:
-    - output_file
+    - cache_out
+    - output_files
     run: stage_in.cwl
   stage_out:
     in:

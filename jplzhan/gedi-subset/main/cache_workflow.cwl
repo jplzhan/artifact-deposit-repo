@@ -87,5 +87,6 @@ steps:
         source: parameters
         valueFrom: $(self.aoi)
     out:
-    - output_file
+    - cache_out
+    - output_files
     run: stage_in.cwl
