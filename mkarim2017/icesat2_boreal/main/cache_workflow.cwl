@@ -79,6 +79,8 @@ inputs:
           type: *id001
         in_landsat:
           type: *id001
+        in_lc:
+          type: *id001
         in_tile:
           type: *id001
         in_topo:
@@ -113,7 +115,7 @@ steps:
     run: stage_in.cwl
   stage_in_in_atl08_sample:
     in:
-      cache_dir: stage_in_in_landsat/cache_out
+      cache_dir: stage_in_in_lc/cache_out
       cache_only: cache_only
       input_path:
         source: parameters
@@ -129,6 +131,17 @@ steps:
       input_path:
         source: parameters
         valueFrom: $(self.in_landsat)
+    out:
+    - cache_out
+    - output_files
+    run: stage_in.cwl
+  stage_in_in_lc:
+    in:
+      cache_dir: stage_in_in_landsat/cache_out
+      cache_only: cache_only
+      input_path:
+        source: parameters
+        valueFrom: $(self.in_lc)
     out:
     - cache_out
     - output_files

@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "mkarim2017.icesat2_boreal.main",
-            "title": "temp change",
+            "title": "\"added lc_fn\"",
             "owsContext": {
                 "offering": {
                     "content": {
@@ -160,6 +160,17 @@
                 },
                 {
                     "id": "in_landsat",
+                    "title": "Stage-in input specified for URL-to-PATH conversion.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "stage_in"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "in_lc",
                     "title": "Stage-in input specified for URL-to-PATH conversion.",
                     "literalDataDomains": [
                         {

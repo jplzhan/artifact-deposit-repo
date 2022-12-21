@@ -14,6 +14,7 @@ inputs:
   in_atl08: File[]
   in_atl08_sample: File[]
   in_landsat: File[]
+  in_lc: File[]
   in_tile: File[]
   in_tile_field: string
   in_tile_num: int
