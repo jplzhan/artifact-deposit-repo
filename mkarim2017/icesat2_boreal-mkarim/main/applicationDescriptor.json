@@ -1,0 +1,233 @@
+{
+    "processDescription": {
+        "process": {
+            "id": "mkarim2017.icesat2_boreal-mkarim.main",
+            "title": "update",
+            "owsContext": {
+                "offering": {
+                    "content": {
+                        "href": "https://raw.githubusercontent.com/jplzhan/artifact-deposit-repo/main/mkarim2017/icesat2_boreal-mkarim/main/workflow.cwl"
+                    }
+                }
+            },
+            "abstract": "Application Package Demo",
+            "keywords": [
+                "Demo"
+            ],
+            "inputs": [
+                {
+                    "id": "DO_SLOPE_VALID_MASK",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "boolean"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "in_tile_num",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "int"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "in_tile_field",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "iters",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "int"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "ppside",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "int"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "minDOY",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "int"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "maxDOY",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "int"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "max_sol_el",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "int"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "expand_training",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "boolean"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "local_train_perc",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "int"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "min_n",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "int"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "in_atl08",
+                    "title": "Stage-in input specified for URL-to-PATH conversion.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "stage_in"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "in_topo",
+                    "title": "Stage-in input specified for URL-to-PATH conversion.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "stage_in"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "in_landsat",
+                    "title": "Stage-in input specified for URL-to-PATH conversion.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "stage_in"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "in_lc",
+                    "title": "Stage-in input specified for URL-to-PATH conversion.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "stage_in"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "in_atl08_sample",
+                    "title": "Stage-in input specified for URL-to-PATH conversion.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "stage_in"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "in_tile",
+                    "title": "Stage-in input specified for URL-to-PATH conversion.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "stage_in"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "boreal_vect",
+                    "title": "Stage-in input specified for URL-to-PATH conversion.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "stage_in"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "outputs": []
+        },
+        "processVersion": "1.0.0",
+        "jobControlOptions": [
+            "async-execute"
+        ],
+        "outputTransmission": [
+            "reference"
+        ]
+    },
+    "immediateDeployment": true,
+    "executionUnit": [
+        {
+            "href": "docker://jplzhan/ci-generated-images:mkarim2017.icesat2_boreal-mkarim.main"
+        }
+    ]
+}
