@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "mkarim2017.icesat2_boreal-mkarim.main",
-            "title": "update",
+            "title": "added aws cred as parameter",
             "owsContext": {
                 "offering": {
                     "content": {
@@ -132,6 +132,61 @@
                         {
                             "dataType": {
                                 "name": "int"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "aws_credentials",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "aws_access_key_id",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "aws_secret_access_key",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "aws_token",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "aws_region",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
                             }
                         }
                     ]
