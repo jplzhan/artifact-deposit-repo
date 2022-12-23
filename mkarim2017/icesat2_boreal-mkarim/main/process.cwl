@@ -10,10 +10,9 @@ cwlVersion: v1.2
 inputs:
   DO_SLOPE_VALID_MASK: boolean
   aws_access_key_id: string
-  aws_credentials: string
   aws_region: string
   aws_secret_access_key: string
-  aws_token: string
+  aws_session_token: string
   boreal_vect: File[]
   expand_training: boolean
   in_atl08: File[]

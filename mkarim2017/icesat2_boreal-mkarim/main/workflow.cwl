@@ -13,10 +13,9 @@ inputs:
       fields:
         DO_SLOPE_VALID_MASK: boolean
         aws_access_key_id: string
-        aws_credentials: string
         aws_region: string
         aws_secret_access_key: string
-        aws_token: string
+        aws_session_token: string
         boreal_vect:
           type: &id001
           - fields:
@@ -134,18 +133,15 @@ steps:
       aws_access_key_id:
         source: parameters
         valueFrom: $(self.aws_access_key_id)
-      aws_credentials:
-        source: parameters
-        valueFrom: $(self.aws_credentials)
       aws_region:
         source: parameters
         valueFrom: $(self.aws_region)
       aws_secret_access_key:
         source: parameters
         valueFrom: $(self.aws_secret_access_key)
-      aws_token:
+      aws_session_token:
         source: parameters
-        valueFrom: $(self.aws_token)
+        valueFrom: $(self.aws_session_token)
       boreal_vect: stage_in_boreal_vect/output_files
       expand_training:
         source: parameters
