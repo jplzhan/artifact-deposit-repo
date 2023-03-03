@@ -3,24 +3,12 @@ baseCommand:
 - papermill
 - /home/jovyan/process.ipynb
 - output_nb.ipynb
+- -f
+- /tmp/inputs.json
 class: CommandLineTool
-cwlVersion: v1.1
-hints:
-  DockerRequirement:
-    dockerPull: jplzhan/ci-generated-images:unity-sds.unity-analytics-bcdp.main
+cwlVersion: v1.2
 inputs:
-  dataset_path:
-    inputBinding:
-      prefix: --parameters
-      shellQuote: false
-      valueFrom: dataset_path "$(self)"
-    type: string
-  variable:
-    inputBinding:
-      prefix: --parameters
-      shellQuote: false
-      valueFrom: variable "$(self)"
-    type: string
+  variable: string
 outputs:
   output_dir:
     outputBinding:
@@ -31,6 +19,14 @@ outputs:
       glob: output_nb.ipynb
     type: File
 requirements:
+  DockerRequirement:
+    dockerPull: jplzhan/ci-generated-images:unity-sds.unity-analytics-bcdp.main
+  InitialWorkDirRequirement:
+    listing:
+    - entry: $(inputs)
+      entryname: /tmp/inputs.json
+  InplaceUpdateRequirement:
+    inplaceUpdate: true
   NetworkAccess:
     networkAccess: true
   ShellCommandRequirement: {}

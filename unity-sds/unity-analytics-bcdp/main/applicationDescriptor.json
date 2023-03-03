@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "unity-sds.unity-analytics-bcdp.main",
-            "title": "Update environment.yml",
+            "title": "New papermill notebook with more params",
             "owsContext": {
                 "offering": {
                     "content": {
@@ -21,22 +21,7 @@
                     "literalDataDomains": [
                         {
                             "dataType": {
-                                "name": [
-                                    "string"
-                                ]
-                            }
-                        }
-                    ]
-                },
-                {
-                    "id": "dataset_path",
-                    "title": "Automatically detected using papermill.",
-                    "literalDataDomains": [
-                        {
-                            "dataType": {
-                                "name": [
-                                    "string"
-                                ]
+                                "name": "string"
                             }
                         }
                     ]

@@ -2,16 +2,25 @@
 $namespaces:
   cwltool: http://commonwl.org/cwltool#
 class: Workflow
-cwlVersion: v1.1
+cwlVersion: v1.2
 inputs:
-  dataset_path: string
+  cache_dir: Directory?
+  cache_only:
+    default: false
+    type: boolean
+  parameters:
+    type:
+      fields:
+        variable: string
+      name: parameters
+      type: record
   stage_out:
     type:
     - fields:
         aws_access_key_id: string
         aws_secret_access_key: string
         aws_session_token: string
-        region: string
+        region_name: string
         s3_url: string
       name: STAK
       type: record
@@ -24,13 +33,15 @@ inputs:
         s3_url: string
       name: IAM
       type: record
-  variable: string
 outputs: {}
+requirements:
+  StepInputExpressionRequirement: {}
 steps:
   process:
     in:
-      dataset_path: dataset_path
-      variable: variable
+      variable:
+        source: parameters
+        valueFrom: $(self.variable)
     out:
     - output_nb
     - output_dir

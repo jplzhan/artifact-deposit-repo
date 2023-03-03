@@ -3,10 +3,7 @@ baseCommand:
 - python3
 - /home/jovyan/stage_out.py
 class: CommandLineTool
-cwlVersion: v1.1
-hints:
-  DockerRequirement:
-    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v7
+cwlVersion: v1.2
 inputs:
   output_dir:
     inputBinding:
@@ -41,7 +38,7 @@ inputs:
             shellQuote: false
             valueFrom: $(self)
           type: string
-        region:
+        region_name:
           inputBinding:
             position: 7
             shellQuote: false
@@ -81,6 +78,8 @@ inputs:
       type: record
 outputs: {}
 requirements:
+  DockerRequirement:
+    dockerPull: jplzhan/ci-generated-images:jplzhan.maap-ci-stage-io.v9
   NetworkAccess:
     networkAccess: true
   ShellCommandRequirement: {}
