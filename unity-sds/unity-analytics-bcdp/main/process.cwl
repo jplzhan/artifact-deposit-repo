@@ -8,8 +8,26 @@ baseCommand:
 class: CommandLineTool
 cwlVersion: v1.2
 inputs:
-  variable: string
+  activity_id: string
+  backend: string
+  experiment_id: string
+  freq: string
+  grid_label: string
+  institution_id: string
+  lat_bnds: Any
+  lon_bnds: Any
+  member_id: string
+  method: string
+  res: Any
+  season: Any
+  table_id: string
+  time_bnds: Any
+  variable_id: string
 outputs:
+  nc_file:
+    outputBinding:
+      glob: '''CMIP_example.nc'''
+    type: File
   output_dir:
     outputBinding:
       glob: output
@@ -17,6 +35,10 @@ outputs:
   output_nb:
     outputBinding:
       glob: output_nb.ipynb
+    type: File
+  plot_file:
+    outputBinding:
+      glob: '''CMIP_example.png'''
     type: File
 requirements:
   DockerRequirement:

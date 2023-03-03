@@ -2,7 +2,7 @@
     "processDescription": {
         "process": {
             "id": "unity-sds.unity-analytics-bcdp.main",
-            "title": "New papermill notebook with more params",
+            "title": "Use correct process.ipynb",
             "owsContext": {
                 "offering": {
                     "content": {
@@ -16,7 +16,7 @@
             ],
             "inputs": [
                 {
-                    "id": "variable",
+                    "id": "variable_id",
                     "title": "Automatically detected using papermill.",
                     "literalDataDomains": [
                         {
@@ -25,9 +25,188 @@
                             }
                         }
                     ]
+                },
+                {
+                    "id": "experiment_id",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "table_id",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "member_id",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "grid_label",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "activity_id",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "institution_id",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "backend",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "method",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "res",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "Any"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "freq",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "lat_bnds",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "Any"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "lon_bnds",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "Any"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "time_bnds",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "Any"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "season",
+                    "title": "Automatically detected using papermill.",
+                    "literalDataDomains": [
+                        {
+                            "dataType": {
+                                "name": "Any"
+                            }
+                        }
+                    ]
                 }
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "id": "nc_file",
+                    "title": "Automatically detected from .ipynb parsing.",
+                    "output": {
+                        "formats": [
+                            {
+                                "mimeType": "text/*",
+                                "default": true
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "plot_file",
+                    "title": "Automatically detected from .ipynb parsing.",
+                    "output": {
+                        "formats": [
+                            {
+                                "mimeType": "text/*",
+                                "default": true
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "processVersion": "1.0.0",
         "jobControlOptions": [
